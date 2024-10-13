@@ -9,7 +9,9 @@
 	<haxelib name="apollo" />	
         <haxelib name="haxeui-core" />
 	<haxelib name="openfl-spine" />
-	<haxelib name="actuate" />	
+	<haxelib name="spine-haxe" />	
+	<haxelib name="actuate" />
+	<haxelib name="starling" />
 	<haxelib name="haxeui-openfl" />	
 	<assets path="Assets" rename="assets" />
 	
