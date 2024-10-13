@@ -10,6 +10,7 @@ HX_DECLARE_CLASS2(haxe,ds,ObjectMap)
 HX_DECLARE_CLASS2(haxe,ds,StringMap)
 HX_DECLARE_CLASS2(lime,app,_Event_Int_Int_Void)
 HX_DECLARE_CLASS2(lime,app,_Event_Void_Void)
+HX_DECLARE_CLASS2(lime,utils,AssetLibrary)
 HX_DECLARE_CLASS2(lime,utils,Preloader)
 
 namespace lime{
@@ -57,14 +58,14 @@ class HXCPP_CLASS_ATTRIBUTES Preloader_obj : public ::hx::Object
 		int bytesTotal;
 		 ::haxe::ds::StringMap bytesTotalCache;
 		bool initLibraryNames;
-		::cpp::VirtualArray libraries;
+		::Array< ::Dynamic> libraries;
 		::Array< ::String > libraryNames;
 		int loadedLibraries;
 		bool loadedStage;
 		bool preloadComplete;
 		bool preloadStarted;
 		bool simulateProgress;
-		void addLibrary( ::Dynamic library);
+		void addLibrary( ::lime::utils::AssetLibrary library);
 		::Dynamic addLibrary_dyn();
 
 		void addLibraryName(::String name);

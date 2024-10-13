@@ -12,11 +12,20 @@
 #ifndef INCLUDED_haxe_ds_StringMap
 #include <haxe/ds/StringMap.h>
 #endif
+#ifndef INCLUDED_lime_app_Future
+#include <lime/app/Future.h>
+#endif
 #ifndef INCLUDED_lime_app__Event_Int_Int_Void
 #include <lime/app/_Event_Int_Int_Void.h>
 #endif
 #ifndef INCLUDED_lime_app__Event_Void_Void
 #include <lime/app/_Event_Void_Void.h>
+#endif
+#ifndef INCLUDED_lime_utils_AssetLibrary
+#include <lime/utils/AssetLibrary.h>
+#endif
+#ifndef INCLUDED_lime_utils_Assets
+#include <lime/utils/Assets.h>
 #endif
 #ifndef INCLUDED_lime_utils_Log
 #include <lime/utils/Log.h>
@@ -36,6 +45,9 @@ HX_LOCAL_STACK_FRAME(_hx_pos_e07f6fac014e5fdd_187_loadedAssetLibrary,"lime.utils
 HX_LOCAL_STACK_FRAME(_hx_pos_e07f6fac014e5fdd_208_start,"lime.utils.Preloader","start",0x6e4321f4,"lime.utils.Preloader.start","lime/utils/Preloader.hx",208,0xe721f000)
 HX_LOCAL_STACK_FRAME(_hx_pos_e07f6fac014e5fdd_223_update,"lime.utils.Preloader","update",0x8d85b837,"lime.utils.Preloader.update","lime/utils/Preloader.hx",223,0xe721f000)
 HX_LOCAL_STACK_FRAME(_hx_pos_e07f6fac014e5fdd_226_updateProgress,"lime.utils.Preloader","updateProgress",0x4fb7fb04,"lime.utils.Preloader.updateProgress","lime/utils/Preloader.hx",226,0xe721f000)
+HX_LOCAL_STACK_FRAME(_hx_pos_e07f6fac014e5fdd_244_updateProgress,"lime.utils.Preloader","updateProgress",0x4fb7fb04,"lime.utils.Preloader.updateProgress","lime/utils/Preloader.hx",244,0xe721f000)
+HX_LOCAL_STACK_FRAME(_hx_pos_e07f6fac014e5fdd_272_updateProgress,"lime.utils.Preloader","updateProgress",0x4fb7fb04,"lime.utils.Preloader.updateProgress","lime/utils/Preloader.hx",272,0xe721f000)
+HX_LOCAL_STACK_FRAME(_hx_pos_e07f6fac014e5fdd_293_updateProgress,"lime.utils.Preloader","updateProgress",0x4fb7fb04,"lime.utils.Preloader.updateProgress","lime/utils/Preloader.hx",293,0xe721f000)
 namespace lime{
 namespace utils{
 
@@ -48,7 +60,7 @@ HXLINE(  36)		this->onProgress =  ::lime::app::_Event_Int_Int_Void_obj::__alloc(
 HXLINE(  35)		this->onComplete =  ::lime::app::_Event_Void_Void_obj::__alloc( HX_CTX );
 HXLINE(  60)		this->bytesLoaded = 0;
 HXLINE(  61)		this->bytesTotal = 0;
-HXLINE(  63)		this->libraries = ::cpp::VirtualArray_obj::__new();
+HXLINE(  63)		this->libraries = ::Array_obj< ::Dynamic>::__new();
 HXLINE(  64)		this->libraryNames = ::Array_obj< ::String >::__new();
 HXLINE(  66)		this->onProgress->add(this->update_dyn(),null(),null());
             	}
@@ -68,7 +80,7 @@ bool Preloader_obj::_hx_isInstanceOf(int inClassId) {
 	return inClassId==(int)0x00000001 || inClassId==(int)0x773c4d3e;
 }
 
-void Preloader_obj::addLibrary( ::Dynamic library){
+void Preloader_obj::addLibrary( ::lime::utils::AssetLibrary library){
             	HX_STACKFRAME(&_hx_pos_e07f6fac014e5fdd_111_addLibrary)
 HXDLIN( 111)		this->libraries->push(library);
             	}
@@ -91,22 +103,22 @@ void Preloader_obj::load(){
 HXDLIN( 123)		 ::lime::utils::Preloader _gthis = ::hx::ObjectPtr<OBJ_>(this);
 HXLINE( 124)		{
 HXLINE( 124)			int _g = 0;
-HXDLIN( 124)			::cpp::VirtualArray _g1 = this->libraries;
-HXDLIN( 124)			while((_g < _g1->get_length())){
-HXLINE( 124)				 ::Dynamic library = _g1->__get(_g);
+HXDLIN( 124)			::Array< ::Dynamic> _g1 = this->libraries;
+HXDLIN( 124)			while((_g < _g1->length)){
+HXLINE( 124)				 ::lime::utils::AssetLibrary library = _g1->__get(_g).StaticCast<  ::lime::utils::AssetLibrary >();
 HXDLIN( 124)				_g = (_g + 1);
 HXLINE( 126)				 ::lime::utils::Preloader _hx_tmp = ::hx::ObjectPtr<OBJ_>(this);
-HXDLIN( 126)				_hx_tmp->bytesTotal = ( (int)((_hx_tmp->bytesTotal + library->__Field(HX_("bytesTotal",59,57,da,45),::hx::paccDynamic))) );
+HXDLIN( 126)				_hx_tmp->bytesTotal = (_hx_tmp->bytesTotal + library->bytesTotal);
             			}
             		}
 HXLINE( 129)		this->loadedLibraries = -1;
 HXLINE( 130)		this->preloadStarted = false;
 HXLINE( 132)		{
 HXLINE( 132)			int _g2 = 0;
-HXDLIN( 132)			::cpp::VirtualArray _g3 = this->libraries;
-HXDLIN( 132)			while((_g2 < _g3->get_length())){
-            				HX_BEGIN_LOCAL_FUNC_S2(::hx::LocalFunc,_hx_Closure_0, ::lime::utils::Preloader,_gthis, ::Dynamic,library) HXARGC(2)
-            				void _hx_run(int loaded, ::Dynamic total){
+HXDLIN( 132)			::Array< ::Dynamic> _g3 = this->libraries;
+HXDLIN( 132)			while((_g2 < _g3->length)){
+            				HX_BEGIN_LOCAL_FUNC_S2(::hx::LocalFunc,_hx_Closure_0, ::lime::utils::Preloader,_gthis, ::lime::utils::AssetLibrary,library) HXARGC(2)
+            				void _hx_run(int loaded,int total){
             					HX_STACKFRAME(&_hx_pos_e07f6fac014e5fdd_138_load)
 HXLINE( 139)					if (!(_gthis->bytesLoadedCache->exists(library))) {
 HXLINE( 141)						 ::lime::utils::Preloader _gthis1 = _gthis;
@@ -124,17 +136,17 @@ HXLINE( 152)						_gthis->onProgress->dispatch(_gthis->bytesLoaded,_gthis->bytes
             				}
             				HX_END_LOCAL_FUNC2((void))
 
-            				HX_BEGIN_LOCAL_FUNC_S2(::hx::LocalFunc,_hx_Closure_1, ::lime::utils::Preloader,_gthis, ::Dynamic,library) HXARGC(1)
-            				void _hx_run( ::Dynamic _){
+            				HX_BEGIN_LOCAL_FUNC_S2(::hx::LocalFunc,_hx_Closure_1, ::lime::utils::Preloader,_gthis, ::lime::utils::AssetLibrary,library) HXARGC(1)
+            				void _hx_run( ::lime::utils::AssetLibrary _){
             					HX_STACKFRAME(&_hx_pos_e07f6fac014e5fdd_156_load)
 HXLINE( 157)					if (!(_gthis->bytesLoadedCache->exists(library))) {
 HXLINE( 159)						 ::lime::utils::Preloader _gthis1 = _gthis;
-HXDLIN( 159)						_gthis1->bytesLoaded = ( (int)((_gthis1->bytesLoaded + library->__Field(HX_("bytesTotal",59,57,da,45),::hx::paccDynamic))) );
+HXDLIN( 159)						_gthis1->bytesLoaded = (_gthis1->bytesLoaded + library->bytesTotal);
             					}
             					else {
 HXLINE( 163)						 ::lime::utils::Preloader _gthis1 = _gthis;
 HXDLIN( 163)						int _gthis2 = _gthis1->bytesLoaded;
-HXDLIN( 163)						int _hx_tmp = ::Std_obj::_hx_int(( (Float)(library->__Field(HX_("bytesTotal",59,57,da,45),::hx::paccDynamic)) ));
+HXDLIN( 163)						int _hx_tmp = ::Std_obj::_hx_int(( (Float)(library->bytesTotal) ));
 HXDLIN( 163)						_gthis1->bytesLoaded = (_gthis2 + (_hx_tmp - _gthis->bytesLoadedCache->get_int(library)));
             					}
 HXLINE( 166)					_gthis->loadedAssetLibrary(null());
@@ -148,10 +160,10 @@ HXLINE( 170)					::lime::utils::Log_obj::error(e,::hx::SourceInfo(HX_("lime/util
             				}
             				HX_END_LOCAL_FUNC1((void))
 
-HXLINE( 132)				 ::Dynamic library = _g3->__get(_g2);
+HXLINE( 132)				 ::lime::utils::AssetLibrary library = _g3->__get(_g2).StaticCast<  ::lime::utils::AssetLibrary >();
 HXDLIN( 132)				_g2 = (_g2 + 1);
 HXLINE( 134)				::lime::utils::Log_obj::verbose(HX_("Preloading asset library",44,27,6d,96),::hx::SourceInfo(HX_("lime/utils/Preloader.hx",00,f0,21,e7),134,HX_("lime.utils.Preloader",80,b4,12,ca),HX_("load",26,9a,b7,47)));
-HXLINE( 136)				library->__Field(HX_("load",26,9a,b7,47),::hx::paccDynamic)()->__Field(HX_("onProgress",ec,cb,e1,63),::hx::paccDynamic)( ::Dynamic(new _hx_Closure_0(_gthis,library)))->__Field(HX_("onComplete",f8,d4,7e,5d),::hx::paccDynamic)( ::Dynamic(new _hx_Closure_1(_gthis,library)))->__Field(HX_("onError",29,6a,67,09),::hx::paccDynamic)( ::Dynamic(new _hx_Closure_2()));
+HXLINE( 136)				library->load()->onProgress( ::Dynamic(new _hx_Closure_0(_gthis,library)))->onComplete( ::Dynamic(new _hx_Closure_1(_gthis,library)))->onError( ::Dynamic(new _hx_Closure_2()));
             			}
             		}
 HXLINE( 176)		{
@@ -179,7 +191,7 @@ HXLINE( 190)		int current = this->loadedLibraries;
 HXLINE( 191)		if (!(this->preloadStarted)) {
 HXLINE( 191)			current = (current + 1);
             		}
-HXLINE( 193)		int totalLibraries = (this->libraries->get_length() + this->libraryNames->length);
+HXLINE( 193)		int totalLibraries = (this->libraries->length + this->libraryNames->length);
 HXLINE( 195)		if (::hx::IsNotNull( name )) {
 HXLINE( 197)			::lime::utils::Log_obj::verbose(((((((HX_("Loaded asset library: ",36,ba,cc,98) + name) + HX_(" [",3b,1c,00,00)) + current) + HX_("/",2f,00,00,00)) + totalLibraries) + HX_("]",5d,00,00,00)),::hx::SourceInfo(HX_("lime/utils/Preloader.hx",00,f0,21,e7),197,HX_("lime.utils.Preloader",80,b4,12,ca),HX_("loadedAssetLibrary",90,0a,d2,6a)));
             		}
@@ -227,17 +239,94 @@ HX_DEFINE_DYNAMIC_FUNC2(Preloader_obj,update,(void))
 
 void Preloader_obj::updateProgress(){
             	HX_STACKFRAME(&_hx_pos_e07f6fac014e5fdd_226_updateProgress)
+HXDLIN( 226)		 ::lime::utils::Preloader _gthis = ::hx::ObjectPtr<OBJ_>(this);
 HXLINE( 227)		if (!(this->simulateProgress)) {
 HXLINE( 229)			this->onProgress->dispatch(this->bytesLoaded,this->bytesTotal);
             		}
-HXLINE( 299)		bool _hx_tmp;
-HXDLIN( 299)		if (!(this->simulateProgress)) {
-HXLINE( 299)			_hx_tmp = (this->loadedLibraries == (this->libraries->get_length() + this->libraryNames->length));
+HXLINE( 233)		bool _hx_tmp;
+HXDLIN( 233)		if ((this->loadedLibraries == this->libraries->length)) {
+HXLINE( 233)			_hx_tmp = !(this->initLibraryNames);
             		}
             		else {
-HXLINE( 299)			_hx_tmp = false;
+HXLINE( 233)			_hx_tmp = false;
             		}
-HXDLIN( 299)		if (_hx_tmp) {
+HXDLIN( 233)		if (_hx_tmp) {
+HXLINE( 235)			this->initLibraryNames = true;
+HXLINE( 237)			{
+HXLINE( 237)				int _g = 0;
+HXDLIN( 237)				::Array< ::String > _g1 = this->libraryNames;
+HXDLIN( 237)				while((_g < _g1->length)){
+            					HX_BEGIN_LOCAL_FUNC_S2(::hx::LocalFunc,_hx_Closure_0,::String,name, ::lime::utils::Preloader,_gthis) HXARGC(2)
+            					void _hx_run(int loaded,int total){
+            						HX_STACKFRAME(&_hx_pos_e07f6fac014e5fdd_244_updateProgress)
+HXLINE( 244)						if ((total > 0)) {
+HXLINE( 246)							if (!(_gthis->bytesTotalCache->exists(name))) {
+HXLINE( 248)								_gthis->bytesTotalCache->set(name,total);
+HXLINE( 249)								 ::lime::utils::Preloader _gthis1 = _gthis;
+HXDLIN( 249)								_gthis1->bytesTotal = (_gthis1->bytesTotal + (total - 200));
+            							}
+HXLINE( 252)							if ((loaded > total)) {
+HXLINE( 252)								loaded = total;
+            							}
+HXLINE( 254)							if (!(_gthis->bytesLoadedCache2->exists(name))) {
+HXLINE( 256)								 ::lime::utils::Preloader _gthis1 = _gthis;
+HXDLIN( 256)								_gthis1->bytesLoaded = (_gthis1->bytesLoaded + loaded);
+            							}
+            							else {
+HXLINE( 260)								 ::lime::utils::Preloader _gthis1 = _gthis;
+HXDLIN( 260)								int _gthis2 = _gthis1->bytesLoaded;
+HXDLIN( 260)								_gthis1->bytesLoaded = (_gthis2 + (loaded - _gthis->bytesLoadedCache2->get_int(name)));
+            							}
+HXLINE( 263)							_gthis->bytesLoadedCache2->set(name,loaded);
+HXLINE( 265)							if (!(_gthis->simulateProgress)) {
+HXLINE( 267)								_gthis->onProgress->dispatch(_gthis->bytesLoaded,_gthis->bytesTotal);
+            							}
+            						}
+            					}
+            					HX_END_LOCAL_FUNC2((void))
+
+            					HX_BEGIN_LOCAL_FUNC_S2(::hx::LocalFunc,_hx_Closure_1,::String,name, ::lime::utils::Preloader,_gthis) HXARGC(1)
+            					void _hx_run( ::lime::utils::AssetLibrary library){
+            						HX_STACKFRAME(&_hx_pos_e07f6fac014e5fdd_272_updateProgress)
+HXLINE( 273)						int total = 200;
+HXLINE( 275)						if (_gthis->bytesTotalCache->exists(name)) {
+HXLINE( 277)							total = _gthis->bytesTotalCache->get_int(name);
+            						}
+HXLINE( 280)						if (!(_gthis->bytesLoadedCache2->exists(name))) {
+HXLINE( 282)							 ::lime::utils::Preloader _gthis1 = _gthis;
+HXDLIN( 282)							_gthis1->bytesLoaded = (_gthis1->bytesLoaded + total);
+            						}
+            						else {
+HXLINE( 286)							 ::lime::utils::Preloader _gthis1 = _gthis;
+HXDLIN( 286)							int _gthis2 = _gthis1->bytesLoaded;
+HXDLIN( 286)							_gthis1->bytesLoaded = (_gthis2 + (total - _gthis->bytesLoadedCache2->get_int(name)));
+            						}
+HXLINE( 289)						_gthis->loadedAssetLibrary(name);
+            					}
+            					HX_END_LOCAL_FUNC1((void))
+
+            					HX_BEGIN_LOCAL_FUNC_S0(::hx::LocalFunc,_hx_Closure_2) HXARGC(1)
+            					void _hx_run( ::Dynamic e){
+            						HX_STACKFRAME(&_hx_pos_e07f6fac014e5fdd_293_updateProgress)
+HXLINE( 293)						::lime::utils::Log_obj::error(e,::hx::SourceInfo(HX_("lime/utils/Preloader.hx",00,f0,21,e7),293,HX_("lime.utils.Preloader",80,b4,12,ca),HX_("updateProgress",d6,ea,54,bb)));
+            					}
+            					HX_END_LOCAL_FUNC1((void))
+
+HXLINE( 237)					::String name = _g1->__get(_g);
+HXDLIN( 237)					_g = (_g + 1);
+HXLINE( 239)					::lime::utils::Log_obj::verbose((HX_("Preloading asset library: ",ea,b2,78,e9) + name),::hx::SourceInfo(HX_("lime/utils/Preloader.hx",00,f0,21,e7),239,HX_("lime.utils.Preloader",80,b4,12,ca),HX_("updateProgress",d6,ea,54,bb)));
+HXLINE( 241)					::lime::utils::Assets_obj::loadLibrary(name)->onProgress( ::Dynamic(new _hx_Closure_0(name,_gthis)))->onComplete( ::Dynamic(new _hx_Closure_1(name,_gthis)))->onError( ::Dynamic(new _hx_Closure_2()));
+            				}
+            			}
+            		}
+HXLINE( 299)		bool _hx_tmp1;
+HXDLIN( 299)		if (!(this->simulateProgress)) {
+HXLINE( 299)			_hx_tmp1 = (this->loadedLibraries == (this->libraries->length + this->libraryNames->length));
+            		}
+            		else {
+HXLINE( 299)			_hx_tmp1 = false;
+            		}
+HXDLIN( 299)		if (_hx_tmp1) {
 HXLINE( 302)			if (!(this->preloadComplete)) {
 HXLINE( 304)				this->preloadComplete = true;
 HXLINE( 306)				::lime::utils::Log_obj::verbose(HX_("Preload complete",10,f4,03,24),::hx::SourceInfo(HX_("lime/utils/Preloader.hx",00,f0,21,e7),306,HX_("lime.utils.Preloader",80,b4,12,ca),HX_("updateProgress",d6,ea,54,bb)));
@@ -371,7 +460,7 @@ void Preloader_obj::__Visit(HX_VISIT_PARAMS)
 		if (HX_FIELD_EQ(inName,"complete") ) { complete=inValue.Cast< bool >(); return inValue; }
 		break;
 	case 9:
-		if (HX_FIELD_EQ(inName,"libraries") ) { libraries=inValue.Cast< ::cpp::VirtualArray >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"libraries") ) { libraries=inValue.Cast< ::Array< ::Dynamic> >(); return inValue; }
 		break;
 	case 10:
 		if (HX_FIELD_EQ(inName,"onComplete") ) { onComplete=inValue.Cast<  ::lime::app::_Event_Void_Void >(); return inValue; }
@@ -436,7 +525,7 @@ static ::hx::StorageInfo Preloader_obj_sMemberStorageInfo[] = {
 	{::hx::fsInt,(int)offsetof(Preloader_obj,bytesTotal),HX_("bytesTotal",59,57,da,45)},
 	{::hx::fsObject /*  ::haxe::ds::StringMap */ ,(int)offsetof(Preloader_obj,bytesTotalCache),HX_("bytesTotalCache",29,70,4f,ba)},
 	{::hx::fsBool,(int)offsetof(Preloader_obj,initLibraryNames),HX_("initLibraryNames",fd,89,cd,d2)},
-	{::hx::fsObject /* ::cpp::VirtualArray */ ,(int)offsetof(Preloader_obj,libraries),HX_("libraries",19,50,f8,18)},
+	{::hx::fsObject /* ::Array< ::Dynamic> */ ,(int)offsetof(Preloader_obj,libraries),HX_("libraries",19,50,f8,18)},
 	{::hx::fsObject /* ::Array< ::String > */ ,(int)offsetof(Preloader_obj,libraryNames),HX_("libraryNames",cd,aa,8b,df)},
 	{::hx::fsInt,(int)offsetof(Preloader_obj,loadedLibraries),HX_("loadedLibraries",54,3f,a7,0f)},
 	{::hx::fsBool,(int)offsetof(Preloader_obj,loadedStage),HX_("loadedStage",79,60,2d,7e)},

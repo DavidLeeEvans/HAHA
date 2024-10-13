@@ -3,11 +3,17 @@
 #ifndef INCLUDED_Main
 #include <Main.h>
 #endif
+#ifndef INCLUDED_debug_FPS_Mem
+#include <debug/FPS_Mem.h>
+#endif
 #ifndef INCLUDED_openfl_display_DisplayObject
 #include <openfl/display/DisplayObject.h>
 #endif
 #ifndef INCLUDED_openfl_display_DisplayObjectContainer
 #include <openfl/display/DisplayObjectContainer.h>
+#endif
+#ifndef INCLUDED_openfl_display_FPS
+#include <openfl/display/FPS.h>
 #endif
 #ifndef INCLUDED_openfl_display_IBitmapDrawable
 #include <openfl/display/IBitmapDrawable.h>
@@ -24,12 +30,19 @@
 #ifndef INCLUDED_openfl_events_IEventDispatcher
 #include <openfl/events/IEventDispatcher.h>
 #endif
+#ifndef INCLUDED_openfl_text_TextField
+#include <openfl/text/TextField.h>
+#endif
 
 HX_DEFINE_STACK_FRAME(_hx_pos_e47a9afac0942eb9_9_new,"Main","new",0x6616a5cb,"Main.new","Main.hx",9,0x087e5c05)
 
 void Main_obj::__construct(){
-            	HX_STACKFRAME(&_hx_pos_e47a9afac0942eb9_9_new)
-HXDLIN(   9)		super::__construct();
+            	HX_GC_STACKFRAME(&_hx_pos_e47a9afac0942eb9_9_new)
+HXLINE(  10)		super::__construct();
+HXLINE(  11)		 ::openfl::display::FPS fps =  ::openfl::display::FPS_obj::__alloc( HX_CTX ,10,100,16777215);
+HXLINE(  13)		this->addChild(fps);
+HXLINE(  14)		 ::debug::FPS_Mem fps_mem =  ::debug::FPS_Mem_obj::__alloc( HX_CTX ,10,10,16777215);
+HXLINE(  16)		this->addChild(fps_mem);
             	}
 
 Dynamic Main_obj::__CreateEmpty() { return new Main_obj; }

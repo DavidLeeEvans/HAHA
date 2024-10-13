@@ -73,8 +73,12 @@ import sys.FileSystem;
 
 		var data, manifest, library, bundle;
 
+		Assets.libraryPaths["default"] = rootPath + "manifest/default.json";
 		
 
+		library = Assets.getLibrary ("default");
+		if (library != null) preloadLibraries.push (library);
+		else preloadLibraryNames.push ("default");
 		
 
 	}
@@ -85,6 +89,8 @@ import sys.FileSystem;
 #if !display
 #if flash
 
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_views_listview_code_item_renderer_xml extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__manifest_default_json extends null { }
 
 
 #elseif (desktop || cpp)

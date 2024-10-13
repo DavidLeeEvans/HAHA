@@ -177,9 +177,6 @@
 #ifndef INCLUDED_openfl_text__TextFieldAutoSize_TextFieldAutoSize_Impl_
 #include <openfl/text/_TextFieldAutoSize/TextFieldAutoSize_Impl_.h>
 #endif
-#ifndef INCLUDED_openfl_text_TextField
-#include <openfl/text/TextField.h>
-#endif
 #ifndef INCLUDED_openfl_text_StyleSheet
 #include <openfl/text/StyleSheet.h>
 #endif
@@ -197,6 +194,9 @@
 #endif
 #ifndef INCLUDED_openfl_text__AntiAliasType_AntiAliasType_Impl_
 #include <openfl/text/_AntiAliasType/AntiAliasType_Impl_.h>
+#endif
+#ifndef INCLUDED_openfl_system_System
+#include <openfl/system/System.h>
 #endif
 #ifndef INCLUDED_openfl_system_SecurityDomain
 #include <openfl/system/SecurityDomain.h>
@@ -813,6 +813,9 @@
 #ifndef INCLUDED_haxe_Log
 #include <haxe/Log.h>
 #endif
+#ifndef INCLUDED_openfl_text_TextField
+#include <openfl/text/TextField.h>
+#endif
 #ifndef INCLUDED_haxe_SysTools
 #include <haxe/SysTools.h>
 #endif
@@ -1181,6 +1184,9 @@
 #endif
 #ifndef INCLUDED_openfl_display_FrameLabel
 #include <openfl/display/FrameLabel.h>
+#endif
+#ifndef INCLUDED_openfl_display_FPS
+#include <openfl/display/FPS.h>
 #endif
 #ifndef INCLUDED_openfl_display_DisplayObjectShader
 #include <openfl/display/DisplayObjectShader.h>
@@ -2127,6 +2133,9 @@
 #ifndef INCLUDED_haxe__CallStack_CallStack_Impl_
 #include <haxe/_CallStack/CallStack_Impl_.h>
 #endif
+#ifndef INCLUDED_debug_FPS_Mem
+#include <debug/FPS_Mem.h>
+#endif
 #ifndef INCLUDED_cpp_Lib
 #include <cpp/Lib.h>
 #endif
@@ -2147,6 +2156,9 @@
 #endif
 #ifndef INCLUDED_Reflect
 #include <Reflect.h>
+#endif
+#ifndef INCLUDED_ManifestResources
+#include <ManifestResources.h>
 #endif
 #ifndef INCLUDED_Lambda
 #include <Lambda.h>
@@ -2268,13 +2280,13 @@ __files__boot();
 ::openfl::text::TextFormat_obj::__register();
 ::openfl::text::_TextFieldType::TextFieldType_Impl__obj::__register();
 ::openfl::text::_TextFieldAutoSize::TextFieldAutoSize_Impl__obj::__register();
-::openfl::text::TextField_obj::__register();
 ::openfl::text::StyleSheet_obj::__register();
 ::openfl::text::_GridFitType::GridFitType_Impl__obj::__register();
 ::openfl::text::_FontType::FontType_Impl__obj::__register();
 ::openfl::text::_FontStyle::FontStyle_Impl__obj::__register();
 ::openfl::text::Font_obj::__register();
 ::openfl::text::_AntiAliasType::AntiAliasType_Impl__obj::__register();
+::openfl::_hx_system::System_obj::__register();
 ::openfl::_hx_system::SecurityDomain_obj::__register();
 ::openfl::_hx_system::ApplicationDomain_obj::__register();
 ::openfl::net::URLRequestDefaults_obj::__register();
@@ -2480,6 +2492,7 @@ __files__boot();
 ::haxe::Timer_obj::__register();
 ::haxe::Serializer_obj::__register();
 ::haxe::Log_obj::__register();
+::openfl::text::TextField_obj::__register();
 ::haxe::SysTools_obj::__register();
 ::openfl::display::DisplayObject_obj::__register();
 ::openfl::_Vector::Vector_Impl__obj::__register();
@@ -2603,6 +2616,7 @@ __files__boot();
 ::openfl::display::IGraphicsFill_obj::__register();
 ::openfl::display::FrameScript_obj::__register();
 ::openfl::display::FrameLabel_obj::__register();
+::openfl::display::FPS_obj::__register();
 ::openfl::display::DisplayObjectShader_obj::__register();
 ::openfl::display::Bitmap_obj::__register();
 ::openfl::desktop::NativeApplication_obj::__register();
@@ -2918,6 +2932,7 @@ __files__boot();
 ::haxe::NativeStackTrace_obj::__register();
 ::haxe::Exception_obj::__register();
 ::haxe::_CallStack::CallStack_Impl__obj::__register();
+::debug::FPS_Mem_obj::__register();
 ::cpp::Lib_obj::__register();
 ::Type_obj::__register();
 ::Sys_obj::__register();
@@ -2925,6 +2940,7 @@ __files__boot();
 ::StringBuf_obj::__register();
 ::Std_obj::__register();
 ::Reflect_obj::__register();
+::ManifestResources_obj::__register();
 ::Lambda_obj::__register();
 ::EReg_obj::__register();
 ::Date_obj::__register();
@@ -2982,6 +2998,7 @@ __files__boot();
 ::openfl::_Vector::Vector_Impl__obj::__boot();
 ::openfl::display::DisplayObject_obj::__boot();
 ::haxe::SysTools_obj::__boot();
+::openfl::text::TextField_obj::__boot();
 ::haxe::Serializer_obj::__boot();
 ::haxe::Timer_obj::__boot();
 ::haxe::Unserializer_obj::__boot();
@@ -3186,13 +3203,13 @@ __files__boot();
 ::openfl::net::URLRequestDefaults_obj::__boot();
 ::openfl::_hx_system::ApplicationDomain_obj::__boot();
 ::openfl::_hx_system::SecurityDomain_obj::__boot();
+::openfl::_hx_system::System_obj::__boot();
 ::openfl::text::_AntiAliasType::AntiAliasType_Impl__obj::__boot();
 ::openfl::text::Font_obj::__boot();
 ::openfl::text::_FontStyle::FontStyle_Impl__obj::__boot();
 ::openfl::text::_FontType::FontType_Impl__obj::__boot();
 ::openfl::text::_GridFitType::GridFitType_Impl__obj::__boot();
 ::openfl::text::StyleSheet_obj::__boot();
-::openfl::text::TextField_obj::__boot();
 ::openfl::text::_TextFieldAutoSize::TextFieldAutoSize_Impl__obj::__boot();
 ::openfl::text::_TextFieldType::TextFieldType_Impl__obj::__boot();
 ::openfl::text::TextFormat_obj::__boot();

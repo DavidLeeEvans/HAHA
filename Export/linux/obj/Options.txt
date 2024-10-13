@@ -4,7 +4,6 @@ HXCPP_M64=1
 actuate=1.9.0
 apollo=0.3.0
 desktop=1
-disable_preloader_assets=1
 haxe=4.2.5
 haxe3=1
 haxe4=1

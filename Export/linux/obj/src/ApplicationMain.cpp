@@ -9,6 +9,9 @@
 #ifndef INCLUDED_Main
 #include <Main.h>
 #endif
+#ifndef INCLUDED_ManifestResources
+#include <ManifestResources.h>
+#endif
 #ifndef INCLUDED_Reflect
 #include <Reflect.h>
 #endif
@@ -44,6 +47,9 @@
 #endif
 #ifndef INCLUDED_lime_ui_Window
 #include <lime/ui/Window.h>
+#endif
+#ifndef INCLUDED_lime_utils_AssetLibrary
+#include <lime/utils/AssetLibrary.h>
 #endif
 #ifndef INCLUDED_lime_utils_Preloader
 #include <lime/utils/Preloader.h>
@@ -164,7 +170,8 @@ HXLINE( 121)			::ApplicationMain_obj::start(stage);
 
             	HX_GC_STACKFRAME(&_hx_pos_6fcf922b66429816_31_create)
 HXLINE(  32)		 ::openfl::display::Application app =  ::openfl::display::Application_obj::__alloc( HX_CTX );
-HXLINE(  38)		app->meta->set(HX_("build",2e,db,ea,ba),HX_("4",34,00,00,00));
+HXLINE(  35)		::ManifestResources_obj::init(config);
+HXLINE(  38)		app->meta->set(HX_("build",2e,db,ea,ba),HX_("5",35,00,00,00));
 HXLINE(  39)		app->meta->set(HX_("company",3d,15,69,83),HX_("Cortex Semi",8d,f3,a3,fb));
 HXLINE(  40)		app->meta->set(HX_("file",7c,ce,bb,43),HX_("HAHA",32,ee,c8,2f));
 HXLINE(  41)		app->meta->set(HX_("name",4b,72,ff,48),HX_("HAHA",32,ee,c8,2f));
@@ -223,6 +230,24 @@ HXLINE( 116)		app->_hx___preloader->onComplete->add( ::Dynamic(new _hx_Closure_1
 HXLINE( 121)		 ::openfl::display::Stage stage = ( ( ::openfl::display::Window)(app->_hx___window) )->stage;
 HXDLIN( 121)		 ::Dynamic _hx_tmp =  ::Dynamic(new _hx_Closure_2(stage));
 HXDLIN( 121)		preloader->onComplete->add(_hx_tmp,null(),null());
+HXLINE( 124)		{
+HXLINE( 124)			int _g = 0;
+HXDLIN( 124)			::Array< ::Dynamic> _g1 = ::ManifestResources_obj::preloadLibraries;
+HXDLIN( 124)			while((_g < _g1->length)){
+HXLINE( 124)				 ::lime::utils::AssetLibrary library = _g1->__get(_g).StaticCast<  ::lime::utils::AssetLibrary >();
+HXDLIN( 124)				_g = (_g + 1);
+HXLINE( 126)				app->_hx___preloader->addLibrary(library);
+            			}
+            		}
+HXLINE( 129)		{
+HXLINE( 129)			int _g2 = 0;
+HXDLIN( 129)			::Array< ::String > _g3 = ::ManifestResources_obj::preloadLibraryNames;
+HXDLIN( 129)			while((_g2 < _g3->length)){
+HXLINE( 129)				::String name = _g3->__get(_g2);
+HXDLIN( 129)				_g2 = (_g2 + 1);
+HXLINE( 131)				app->_hx___preloader->addLibraryName(name);
+            			}
+            		}
 HXLINE( 135)		app->_hx___preloader->load();
 HXLINE( 137)		int result = app->exec();
 HXLINE( 140)		::lime::_hx_system::System_obj::exit(result);
