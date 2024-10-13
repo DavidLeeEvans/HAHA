@@ -42,15 +42,16 @@ import starling.display.Canvas;
 
 class Vampire extends Sprite {
 	var loadBinary = true;
-	
+
 	var skeletonSprite:SkeletonSprite;
 	private var movement = new openfl.geom.Point();
 	private var controlBones = [];
-	private	var controls = [];
+	private var controls = [];
 
 	public function load():Void {
 		var atlas = new TextureAtlas(Assets.getText("assets/stretchyman.atlas"), new StarlingTextureLoader("assets/stretchyman.atlas"));
-		var skeletondata = SkeletonData.from(loadBinary ? Assets.getBytes("assets/stretchyman-pro.skel") : Assets.getText("assets/stretchyman-pro.json"), atlas);
+		var skeletondata = SkeletonData.from(loadBinary ? Assets.getBytes("assets/stretchyman-pro.skel") : Assets.getText("assets/stretchyman-pro.json"),
+			atlas);
 		var animationStateData = new AnimationStateData(skeletondata);
 		animationStateData.defaultMix = 0.25;
 
@@ -92,7 +93,7 @@ class Vampire extends Sprite {
 		}
 
 		var point = [.0, .0];
-		skeletonSprite.beforeUpdateWorldTransforms = function (go) {
+		skeletonSprite.beforeUpdateWorldTransforms = function(go) {
 			for (i in 0...controls.length) {
 				var bone = controlBones[i];
 				var control = controls[i];
@@ -101,7 +102,7 @@ class Vampire extends Sprite {
 				go.haxeWorldCoordinatesToBone(point, bone);
 				bone.x = point[0];
 				bone.y = point[1];
-            }
+			}
 		};
 
 		addEventListener(TouchEvent.TOUCH, onTouch);
@@ -130,7 +131,7 @@ class Vampire extends Sprite {
 				skeletonSprite.skeleton.y += movement.y / skeletonSprite.scale;
 			}
 		}
-		
+
 		if (touchBackground) {
 			var sceneTouch = e.getTouch(this);
 			if (sceneTouch != null && sceneTouch.phase == TouchPhase.ENDED) {
