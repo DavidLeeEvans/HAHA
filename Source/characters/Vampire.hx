@@ -30,21 +30,29 @@
 package characters;
 
 import openfl.geom.Point;
+
 // import Scene.SceneManager;
 import openfl.utils.Assets;
+
 import openfl.display.Sprite;
+
 import spine.SkeletonData;
+
 import spine.animation.AnimationStateData;
+
 import spine.atlas.TextureAtlas;
+
 import spine.starling.SkeletonSprite;
 import spine.starling.StarlingTextureLoader;
+
 import starling.core.Starling;
+
 import starling.events.TouchEvent;
 import starling.events.TouchPhase;
+
 import starling.display.Canvas;
+
 import openfl.display.DisplayObject;
 
 // class Vampire extends Sprite {
-class Vampire extends SkeletonSprite{
-	
-}
+class Vampire extends SkeletonSprite {}

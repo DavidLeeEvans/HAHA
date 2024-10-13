@@ -30,8 +30,11 @@
 package spine;
 
 import starling.display.Quad;
+
 import starling.text.TextField;
+
 import starling.core.Starling;
+
 import starling.display.Sprite;
 
 class SceneManager {

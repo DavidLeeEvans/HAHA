@@ -1,9 +1,12 @@
 package;
 
 import debug.FPSMEM.FPS_Mem;
+
 import openfl.display.FPS;
 import openfl.display.Sprite;
+
 import spine.Main;
+
 import characters.Vampire;
 
 class Main extends Sprite {

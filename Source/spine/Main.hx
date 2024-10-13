@@ -30,9 +30,13 @@
 package spine;
 
 import spine.Scene.SceneManager;
+
 import openfl.display.Sprite;
+
 import openfl.geom.Rectangle;
+
 import starling.core.Starling;
+
 import starling.events.Event;
 
 class Main extends Sprite {

@@ -30,16 +30,24 @@
 package spine;
 
 import spine.Scene.SceneManager;
+
 import openfl.utils.Assets;
+
 import spine.SkeletonData;
 import spine.Physics;
+
 import spine.animation.AnimationStateData;
+
 import spine.atlas.TextureAtlas;
+
 import spine.starling.SkeletonSprite;
 import spine.starling.StarlingTextureLoader;
+
 import starling.core.Starling;
+
 import starling.events.TouchEvent;
 import starling.events.TouchPhase;
+
 import starling.display.Quad;
 
 class AnimationBoundExample extends Scene {
