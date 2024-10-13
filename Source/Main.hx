@@ -15,6 +15,6 @@ class Main extends Sprite {
 		var fps_mem:FPS_Mem = new FPS_Mem(10, 10, 0xffffff);
 		//
 		addChild(fps_mem);
-		addChild(second_main);
+//		addChild(second_main);
 	}
 }
