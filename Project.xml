@@ -8,6 +8,7 @@
 	<haxelib name="openfl" />
 	<haxelib name="apollo" />	
         <haxelib name="haxeui-core" />
+	<haxelib name="openfl-spine" />
 	<haxelib name="actuate" />	
 	<haxelib name="haxeui-openfl" />	
 	<assets path="Assets" rename="assets" />
