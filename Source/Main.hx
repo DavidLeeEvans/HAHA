@@ -8,7 +8,7 @@ import spine.Main;
 class Main extends Sprite {
 	public function new() {
 		super();
-		var second_main:Main = new Main();
+//		var second_main:Main = new Main();
 		var fps:FPS = new FPS(10, 100, 0xffffff);
 		//
 		addChild(fps);
