@@ -7,7 +7,7 @@ import openfl.text.TextField;
 import openfl.text.TextFormat;
 
 class CutScreen extends Sprite {
-	public function new(location:String, color:UInt) {
+	public function new(title:String, id:UInt, is_enabled:boolean) {
 		super();
 	}
 }
