@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	
+	<meta title="HAHA" package="com.davidevans.games.haha" version="1.0.0" company="Cortex Semi" />
+	<app main="Main" path="Export" file="HAHA" />
+	
+	<source path="Source" />
+	<haxelib name="openfl" />
+	<haxelib name="apollo" />	
+        <haxelib name="haxeui-core" />
+	<haxelib name="actuate" />	
+	<haxelib name="haxeui-openfl" />	
+	<assets path="Assets" rename="assets" />
+	
+</project>
+
+
