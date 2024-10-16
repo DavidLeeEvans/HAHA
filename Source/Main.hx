@@ -12,7 +12,7 @@ import characters.Vampire;
 class Main extends Sprite {
 	public function new() {
 		super();
-		var vampire = new Vampire();
+		//		var vampire = new Vampire();
 		var fps:FPS = new FPS(10, 100, 0xffffff);
 		//
 		addChild(fps);
