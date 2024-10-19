@@ -1,5 +1,11 @@
 package;
 
+import screens.CharacterCustomizer;
+import screens.CutScreen;
+import screens.GamePlayingScreen;
+import screens.LoginScreen;
+import screens.OptionScreen;
+import screens.ResultScreen.ResultsScreen;
 import debug.FPSMEM.FPS_Mem;
 
 import openfl.display.FPS;
@@ -8,7 +14,13 @@ import openfl.display.Sprite;
 import screens.LoadingScreen;
 
 class Main extends Sprite {
-	var scene_loading = new LoadingScreen();
+	var sceneCharacterCustomize = new CharacterCustomizer();
+	var sceneCut = new CutScreen();
+	var sceneGamePlaying= new GamePlayingScreen();
+	var sceneLoading = new LoadingScreen();
+	var sceneLogin = new LoginScreen();
+	var sceneOption = new OptionScreen();
+	var sceneResults = new ResultsScreen();
 
 	public function new() {
 		super();
