@@ -20,7 +20,7 @@ class Main extends Sprite {
 	var sceneLogin = new LoginScreen(4,"Login Screen");
 	var sceneCharacterCustomize = new CharacterCustomizer(5, "Customize Character");
 	var sceneGamePlaying= new GamePlayingScreen(6, "Game");
-	var sceneResults = new ResultsScreen(7, "Results");
+	//  var sceneResults = new ResultsScreen(7, "Results");
 
 	public function new() {
 		super();
@@ -29,9 +29,5 @@ class Main extends Sprite {
 		//
 		addChild(fps);
 		var fps_mem:FPS_Mem = new FPS_Mem(10, 10, 0xffffff);
-		// Loading Screeen
-		sceneLoading.setTitle("LoadingScreen");
-
-		
 	}
 }
