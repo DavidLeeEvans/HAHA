@@ -14,13 +14,13 @@ import openfl.display.Sprite;
 import screens.LoadingScreen;
 
 class Main extends Sprite {
-	var sceneCharacterCustomize = new CharacterCustomizer();
-	var sceneCut = new CutScreen();
-	var sceneGamePlaying= new GamePlayingScreen();
-	var sceneLoading = new LoadingScreen();
-	var sceneLogin = new LoginScreen();
-	var sceneOption = new OptionScreen();
-	var sceneResults = new ResultsScreen();
+	var sceneLoading = new LoadingScreen(1,"Loading Screen...");
+	var sceneCut = new CutScreen(2,"");
+	var sceneOption = new OptionScreen(3,"Option Screen");
+	var sceneLogin = new LoginScreen(4,"Login Screen");
+	var sceneCharacterCustomize = new CharacterCustomizer(5, "Customize Character");
+	var sceneGamePlaying= new GamePlayingScreen(6, "Game");
+	var sceneResults = new ResultsScreen(7, "Results");
 
 	public function new() {
 		super();
@@ -29,8 +29,9 @@ class Main extends Sprite {
 		//
 		addChild(fps);
 		var fps_mem:FPS_Mem = new FPS_Mem(10, 10, 0xffffff);
-		//
-		addChild(fps_mem);
-		//		addChild(second_main);
+		// Loading Screen
+		sceneLoading.setTitle("LoadingScreen",0);
+
+		
 	}
 }
