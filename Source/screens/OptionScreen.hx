@@ -8,11 +8,6 @@ import openfl.geom.Point;
 import openfl.text.TextField;
 import openfl.text.TextFormat;
 
-class OptionScreen extends Sprite {
-		public function new() {
-		super();
-	}
-	// public function new(title:String, id:UInt, is_enabled:boolean) {
-	// 	super();
-	// }
+class OptionScreen extends AbstractScreen {
+
 }

@@ -8,8 +8,5 @@ import openfl.geom.Point;
 import openfl.text.TextField;
 import openfl.text.TextFormat;
 
-class ResultsScreen extends Sprite {
-	public function new() {
-		super();
-	}
+class ResultsScreen extends AbstractScreen {
 }

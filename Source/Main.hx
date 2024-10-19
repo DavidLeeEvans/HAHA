@@ -29,8 +29,8 @@ class Main extends Sprite {
 		//
 		addChild(fps);
 		var fps_mem:FPS_Mem = new FPS_Mem(10, 10, 0xffffff);
-		// Loading Screen
-		sceneLoading.setTitle("LoadingScreen",0);
+		// Loading Screeen
+		sceneLoading.setTitle("LoadingScreen");
 
 		
 	}
