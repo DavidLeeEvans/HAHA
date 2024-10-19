@@ -5,11 +5,11 @@ import debug.FPSMEM.FPS_Mem;
 import openfl.display.FPS;
 import openfl.display.Sprite;
 
-import spine.Main;
-
-import characters.Vampire;
+import screens.LoadingScreen;
 
 class Main extends Sprite {
+	var scene_loading = new LoadingScreen();
+
 	public function new() {
 		super();
 		//		var vampire = new Vampire();
