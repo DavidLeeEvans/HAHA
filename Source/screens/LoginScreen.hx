@@ -9,7 +9,10 @@ import openfl.text.TextField;
 import openfl.text.TextFormat;
 
 class LoginScreen extends Sprite {
-	public function new(title:String, id:UInt, is_enabled:boolean) {
+		public function new() {
 		super();
 	}
+	// public function new(title:String, id:UInt, is_enabled:boolean) {
+	// 	super();
+	// }
 }

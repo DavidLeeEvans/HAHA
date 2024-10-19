@@ -8,8 +8,8 @@ import openfl.geom.Point;
 import openfl.text.TextField;
 import openfl.text.TextFormat;
 
-class ResultScreen extends Sprite {
-	public function new(title:String, id:UInt, is_enabled:boolean) {
+class ResultsScreen extends Sprite {
+	public function new() {
 		super();
 	}
 }
