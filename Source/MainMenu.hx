@@ -1,5 +1,5 @@
 package;
-
+/*
 import scenes.AnimationScene;
 import scenes.BenchmarkScene;
 import scenes.BlendModeScene;
@@ -12,6 +12,8 @@ import scenes.Sprite3DScene;
 import scenes.TextScene;
 import scenes.TextureScene;
 import scenes.TouchScene;
+*/
+
 #if demo_video
 import scenes.VideoScene;
 #end
