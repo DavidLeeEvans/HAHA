@@ -3,20 +3,24 @@
 	
 	<meta title="HAHA" package="com.davidevans.games.haha" version="1.0.0" company="Cortex Semi" />
 	<app main="Main" path="Export" file="HAHA" />
-	<haxeflag name="-D source-map" />
-	<!-- <haxeflag name="-D source-map" value="false" /> -->	
+	<!-- -->
+	<window width="480" height="320" orientation="landscape" background="0xffffff" />
+	<window resizable="false" unless="mobile || console" />
+	<window depth-buffer="true" stencil-buffer="true" />
+	<!-- -->	
 	<source path="Source" />
+	<!-- -->
+	<haxeflag name="-D source-map" />
+	<!-- -->	
 	<haxelib name="openfl" />
 	<haxelib name="haxeui-core" />
 	<haxelib name="spine-haxe" />	
 	<haxelib name="actuate" />
 	<haxelib name="starling" />
-	<haxelib name="haxeui-openfl" />	
+	<haxelib name="haxeui-openfl" /.
+	<!-- -->
 	<assets path="Assets" rename="assets" />
 	<assets path="Assets" include="*.skel" rename="assets" type="binary" />
 </project>
 
 
-<!-- -D source-map
--dce no
- -->
