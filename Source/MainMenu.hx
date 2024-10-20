@@ -14,6 +14,7 @@ import scenes.TextureScene;
 import scenes.TouchScene;
 */
 
+import scenes.SplashScene;
 #if demo_video
 import scenes.VideoScene;
 #end
@@ -43,6 +44,8 @@ class MainMenu extends Sprite
     {
         var logo:Image = new Image(Game.assets.getTexture("logo"));
         addChild(logo);
+        var splash:SplashScene = new SplashScene();
+        addChild(splash);
 /*        
         var scenesToCreate:Array<Array<Dynamic>> = [
             ["Textures", TextureScene],
