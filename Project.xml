@@ -19,8 +19,13 @@
 	<haxelib name="starling" />
 	<haxelib name="haxeui-openfl" /.
 	<!-- -->
-	<assets path="Assets" rename="assets" />
-	<assets path="Assets" include="*.skel" rename="assets" type="binary" />
+	<assets path="assets" include="*.skel" rename="assets" type="binary" />
+	<assets path="assets/audio/wing_flap.mp3" if="web || air" embed="false" />
+	<assets path="assets/audio/wing_flap.ogg" unless="flash" embed="false" />
+	<assets path="assets/textures/1x" embed="false" />
+	<assets path="assets/fonts/1x" embed="false" />
+	<assets path="assets/fonts/DejaVuSans.ttf" />
+	<assets path="assets/fonts/Ubuntu-R.ttf" />
 </project>
 
 
