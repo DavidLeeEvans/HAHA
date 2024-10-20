@@ -13,7 +13,7 @@ import openfl.Vector;
 
 import utils.MenuButton;
 
-@:keep class CharacterEdit extends Scene
+@:keep class Login extends Scene
 {
     public function new()
     {
