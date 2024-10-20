@@ -1,8 +1,0 @@
-{
-  "emptyLines": {
-    "importAndUsing": {
-      "betweenImportsLevel": "secondLevelPackage",
-      "betweenImports": 1
-    }
-  }
-}
