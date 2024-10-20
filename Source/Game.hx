@@ -33,6 +33,7 @@ import starling.assets.AssetManager;
     
     public function start(assets:AssetManager):Void
     {
+        trace("Game Start");
         sAssets = assets;
         addChild(new Image(assets.getTexture("background")));
         showMainMenu();

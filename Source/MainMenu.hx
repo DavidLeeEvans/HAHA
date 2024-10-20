@@ -87,6 +87,7 @@ class MainMenu extends Sprite
   // show information about rendering method (hardware/software)
         
         var driverInfo:String = Starling.current.context.driverInfo;
+        trace(driverInfo);
         var infoText:TextField = new TextField(310, 64, driverInfo);
         infoText.format.font = "DejaVu Sans";
         infoText.format.size = 50;

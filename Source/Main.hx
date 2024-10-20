@@ -101,9 +101,9 @@ class Main extends Sprite
 
     private function startGame():Void
     {
-//        var game:Game = cast(_starling.root, Game);
-//        game.start(_assets);
-//        Timer.delay(removeElements, 150); // delay to make 100% sure there's no flickering.
+       var game:Game = cast(_starling.root, Game);
+       game.start(_assets);
+       Timer.delay(removeElements, 150); // delay to make 100% sure there's no flickering.
     }
 
     private function initElements():Void
@@ -119,10 +119,10 @@ class Main extends Sprite
 
         // While the assets are loaded, we will display a progress bar.
 
-        //_progressBar = new ProgressBar(175, 20);
-        //_progressBar.x = (_background.width - _progressBar.width) / 2;
-        //_progressBar.y =  _background.height * 0.7;
-        //addChild(_progressBar);
+        _progressBar = new ProgressBar(175, 20);
+        _progressBar.x = (_background.width - _progressBar.width) / 2;
+        _progressBar.y =  _background.height * 0.7;
+        addChild(_progressBar);
     }
 
     private function removeElements():Void
