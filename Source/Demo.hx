@@ -101,9 +101,9 @@ class Demo extends Sprite
 
     private function startGame():Void
     {
-        var game:Game = cast(_starling.root, Game);
-        game.start(_assets);
-        Timer.delay(removeElements, 150); // delay to make 100% sure there's no flickering.
+//        var game:Game = cast(_starling.root, Game);
+//        game.start(_assets);
+//        Timer.delay(removeElements, 150); // delay to make 100% sure there's no flickering.
     }
 
     private function initElements():Void
