@@ -3,7 +3,8 @@
 	
 	<meta title="HAHA" package="com.davidevans.games.haha" version="1.0.0" company="Cortex Semi" />
 	<app main="Main" path="Export" file="HAHA" />
-	
+	<haxeflag name="-D source-map" />
+	<!-- <haxeflag name="-D source-map" value="false" /> -->	
 	<source path="Source" />
 	<haxelib name="openfl" />
 	<haxelib name="haxeui-core" />
@@ -16,3 +17,6 @@
 </project>
 
 
+<!-- -D source-map
+-dce no
+ -->
