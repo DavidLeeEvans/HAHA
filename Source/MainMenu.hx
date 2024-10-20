@@ -89,10 +89,10 @@ class MainMenu extends Sprite
         var driverInfo:String = Starling.current.context.driverInfo;
         var infoText:TextField = new TextField(310, 64, driverInfo);
         infoText.format.font = "DejaVu Sans";
-        infoText.format.size = 10;
-        infoText.format.verticalAlign = Align.BOTTOM;
-        infoText.x = 5;
-        infoText.y = 475 - infoText.height;
+        infoText.format.size = 50;
+        infoText.format.verticalAlign = Align.TOP;
+        infoText.x = 50;
+        infoText.y = 175 - infoText.height;
         infoText.addEventListener(TouchEvent.TOUCH, onInfoTextTouched);
         addChildAt(infoText, 0);
     }
