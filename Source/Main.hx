@@ -28,7 +28,7 @@ import starling.utils.StringUtil;
 
 import utils.ProgressBar;
 
-class Demo extends Sprite
+class Main extends Sprite
 {
     private var _starling:Starling;
     private var _background:Bitmap;
