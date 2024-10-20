@@ -9,6 +9,8 @@
 	<window depth-buffer="true" stencil-buffer="true" />
 	<!-- -->	
 	<source path="Source" />
+	<source path="system" />
+
 	<!-- -->
 	<haxeflag name="-D source-map" />
 	<!-- -->	
