@@ -77,7 +77,9 @@ import utils.MenuButton;
         // it is animated from it's current value to a target value.  
         tween.animate("rotation", deg2rad(360)); // conventional 'animate' call
         tween.moveTo(Constants.CenterX, Constants.GameWidth);                 // convenience method for animating 'x' and 'y'
-        tween.scaleTo(1.0);                     // convenience method for 'scaleX' and 'scaleY'
+        tween.scaleTo(1.0);    
+        tween.delay = 1.0; 
+                        // convenience method for 'scaleX' and 'scaleY'
         tween.onComplete = function():Void { /**/ };
         
         // the tween alone is useless -- for an animation to be carried out, it has to be 
@@ -85,9 +87,7 @@ import utils.MenuButton;
         // This is done by the 'Juggler'. It receives the tween and will carry it out.
         // We use the default juggler here, but you can create your own jugglers, as well.            
         // That way, you can group animations into logical parts.  
-        // Starling.current.juggler.add(tween);
-        // Starling.current.juggler.add(tween);
-        Starling.current.juggler.delayCall(Starling.current.juggler.add(tween),2.0);
+        Starling.current.juggler.add(tween);
     }
 
     
