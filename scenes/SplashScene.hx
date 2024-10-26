@@ -53,7 +53,7 @@ import utils.MenuButton;
         // _egg.y = 100;
         // _egg.scaleX = _egg.scaleY = 1.0;
         // _egg.rotation = 0.0;
-        _egg.x = Constants.CenterX;
+        _egg.x = 0.0;
         _egg.y = Constants.CenterY;
         _egg.scaleX = _egg.scaleY = 1.0;
         _egg.rotation = 0.0;
@@ -75,12 +75,15 @@ import utils.MenuButton;
         
         // you can animate any property as long as it's numeric (int, uint, Number). 
         // it is animated from it's current value to a target value.  
-        tween.animate("rotation", deg2rad(360)); // conventional 'animate' call
-        tween.moveTo(Constants.CenterX, Constants.GameWidth);                 // convenience method for animating 'x' and 'y'
+        // tween.animate("rotation", deg2rad(360)); // conventional 'animate' call
+        tween.moveTo(Constants.GameWidth, Constants.CenterY);                 // convenience method for animating 'x' and 'y'
         tween.scaleTo(1.0);    
         tween.delay = 1.0; 
                         // convenience method for 'scaleX' and 'scaleY'
-        tween.onComplete = function():Void { /**/ };
+        tween.onComplete = function():Void { 
+            trace("Port Authority Sandwich Shop Deli");
+        
+        };
         
         // the tween alone is useless -- for an animation to be carried out, it has to be 
         // advance once in every frame.            
@@ -99,7 +102,7 @@ import utils.MenuButton;
         
         Starling.current.juggler.delayCall(colorizeEgg, 1.0, [true]);
         Starling.current.juggler.delayCall(colorizeEgg, 2.0, [false]);
-        Starling.current.juggler.delayCall(function(?unused):Void { /**/ }, 2.0);
+        Starling.current.juggler.delayCall(function(?unused):Void {/** unused**/}, 2.0);
     }
     
     private function colorizeEgg(colorize:Bool):Void
