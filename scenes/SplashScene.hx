@@ -1,5 +1,6 @@
 package scenes;
 
+import js.lib.webassembly.Global;
 import starling.animation.BezierEasing;
 import starling.animation.Transitions;
 import starling.animation.Tween;
@@ -48,10 +49,15 @@ import utils.MenuButton;
     
     private function resetEgg():Void
     {
-        _egg.x = 20;
-        _egg.y = 100;
+        // _egg.x = 20;
+        // _egg.y = 100;
+        // _egg.scaleX = _egg.scaleY = 1.0;
+        // _egg.rotation = 0.0;
+        _egg.x = Constants.CenterX;
+        _egg.y = Constants.CenterY;
         _egg.scaleX = _egg.scaleY = 1.0;
         _egg.rotation = 0.0;
+
     }
     
     private function onStartButtonTriggered():Void
@@ -69,9 +75,9 @@ import utils.MenuButton;
         
         // you can animate any property as long as it's numeric (int, uint, Number). 
         // it is animated from it's current value to a target value.  
-        tween.animate("rotation", deg2rad(90)); // conventional 'animate' call
-        tween.moveTo(300, 360);                 // convenience method for animating 'x' and 'y'
-        tween.scaleTo(0.5);                     // convenience method for 'scaleX' and 'scaleY'
+        tween.animate("rotation", deg2rad(360)); // conventional 'animate' call
+        tween.moveTo(Constants.CenterX, Constants.GameWidth);                 // convenience method for animating 'x' and 'y'
+        tween.scaleTo(1.0);                     // convenience method for 'scaleX' and 'scaleY'
         tween.onComplete = function():Void { /**/ };
         
         // the tween alone is useless -- for an animation to be carried out, it has to be 
@@ -79,16 +85,11 @@ import utils.MenuButton;
         // This is done by the 'Juggler'. It receives the tween and will carry it out.
         // We use the default juggler here, but you can create your own jugglers, as well.            
         // That way, you can group animations into logical parts.  
-        Starling.current.juggler.add(tween);
-        
-        // show which tweening function is used
-        // _transitionLabel.text = transition;
-        // _transitionLabel.alpha = 1.0;
-        
-        // var hideTween:Tween = new Tween(_transitionLabel, 2.0, Transitions.EASE_IN);
-        // hideTween.animate("alpha", 0.0);
-        // Starling.current.juggler.add(hideTween);
+        // Starling.current.juggler.add(tween);
+        // Starling.current.juggler.add(tween);
+        Starling.current.juggler.delayCall(Starling.current.juggler.add(tween),2.0);
     }
+
     
     private function onDelayButtonTriggered():Void
     {
