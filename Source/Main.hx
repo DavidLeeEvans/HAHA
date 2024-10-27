@@ -90,6 +90,7 @@ class Main extends Sprite
             Assets.getPath ("assets/textures/1x/compressed_texture.atf"),
             Assets.getPath ("assets/fonts/1x/desyrel.png"),
             Assets.getPath ("assets/fonts/1x/desyrel.fnt"),
+            //TODO dle add other assets 
             #if flash
             Assets.getPath ("assets/audio/wing_flap.mp3")
             #else

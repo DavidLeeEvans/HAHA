@@ -15,6 +15,7 @@ import starling.assets.AssetManager;
 @:keep class Game extends Sprite
 {
     // Embed the Ubuntu Font. Beware: the 'embedAsCFF'-part IS REQUIRED!!!
+    // TODO le examine 
     #if 0
     [Embed(source="../../demo/assets/fonts/Ubuntu-R.ttf", embedAsCFF="false", fontFamily="Ubuntu")]
     private static const UbuntuRegular:Class;
