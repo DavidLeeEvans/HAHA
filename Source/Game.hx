@@ -1,5 +1,7 @@
 package;
 
+import starling.display.DisplayObjectContainer;
+import starling.display.DisplayObject;
 import openfl.system.System;
 import openfl.ui.Keyboard;
 
@@ -12,10 +14,10 @@ import starling.events.Event;
 import starling.events.KeyboardEvent;
 import starling.assets.AssetManager;
 
-@:keep class Game extends Sprite
+@:keep class Game extends DisplayObjectContainer
 {
     // Embed the Ubuntu Font. Beware: the 'embedAsCFF'-part IS REQUIRED!!!
-    // TODO le examine 
+    // TODO dle examine 
     #if 0
     [Embed(source="../../demo/assets/fonts/Ubuntu-R.ttf", embedAsCFF="false", fontFamily="Ubuntu")]
     private static const UbuntuRegular:Class;
