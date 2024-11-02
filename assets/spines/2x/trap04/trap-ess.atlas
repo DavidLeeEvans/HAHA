@@ -1,0 +1,14 @@
+trap-ess.png
+size:349,141
+filter:Linear,Linear
+pma:true
+star
+bounds:275,63,76,72
+rotate:90
+token
+bounds:153,17,120,122
+offsets:0,0,123,122
+wing
+bounds:2,2,137,149
+offsets:0,0,137,150
+rotate:90

@@ -27,6 +27,8 @@
 	<assets path="assets/fonts/1x" embed="false" />
 	<assets path="assets/fonts/DejaVuSans.ttf" />
 	<assets path="assets/fonts/Ubuntu-R.ttf" />
+	<assets path="assets/spines/1x/vampire" embed="true" />
+	
 </project>
 
 
