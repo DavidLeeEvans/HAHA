@@ -92,6 +92,87 @@ class Main extends Sprite
             Assets.getPath ("assets/fonts/1x/desyrel.fnt"),
             //TODO dle add other assets 
 
+            // angel
+            Assets.getPath ("assets/spines/1x/angel/character-ess.png"),
+            Assets.getPath ("assets/spines/1x/angel/character-ess.atlas"),
+            Assets.getPath ("assets/spines/1x/angel/character-ess.spine"),
+            Assets.getPath ("assets/spines/1x/angel/character-ess.spinejson"),
+
+            // demon01
+            Assets.getPath ("assets/spines/1x/demon01/character-ess.png"),
+            Assets.getPath ("assets/spines/1x/demon01/character-ess.atlas"),
+            Assets.getPath ("assets/spines/1x/demon01/character-ess.spine"),
+            Assets.getPath ("assets/spines/1x/demon01/character-ess.spinejson"),
+
+            // demon02
+            Assets.getPath ("assets/spines/1x/demon02/character-ess.png"),
+            Assets.getPath ("assets/spines/1x/demon02/character-ess.atlas"),
+            Assets.getPath ("assets/spines/1x/demon02/character-ess.spine"),
+            Assets.getPath ("assets/spines/1x/demon02/character-ess.spinejson"),
+
+            // demon03
+            Assets.getPath ("assets/spines/1x/demon03/character-ess.png"),
+            Assets.getPath ("assets/spines/1x/demon03/character-ess.atlas"),
+            Assets.getPath ("assets/spines/1x/demon03/character-ess.spine"),
+            Assets.getPath ("assets/spines/1x/demon03/character-ess.spinejson"),
+
+            // demon04
+            Assets.getPath ("assets/spines/1x/demon04/character-ess.png"),
+            Assets.getPath ("assets/spines/1x/demon04/character-ess.atlas"),
+            Assets.getPath ("assets/spines/1x/demon04/character-ess.spine"),
+            Assets.getPath ("assets/spines/1x/demon04/character-ess.spinejson"),
+
+
+            // seraphim01
+            Assets.getPath ("assets/spines/1x/seraphim01/character-ess.png"),
+            Assets.getPath ("assets/spines/1x/seraphim01/character-ess.atlas"),
+            Assets.getPath ("assets/spines/1x/seraphim01/character-ess.spine"),
+            Assets.getPath ("assets/spines/1x/seraphim01/character-ess.spinejson"),
+
+            // seraphim02
+            Assets.getPath ("assets/spines/1x/seraphim02/character-ess.png"),
+            Assets.getPath ("assets/spines/1x/seraphim02/character-ess.atlas"),
+            Assets.getPath ("assets/spines/1x/seraphim02/character-ess.spine"),
+            Assets.getPath ("assets/spines/1x/seraphim02/character-ess.spinejson"),
+
+            // seraphim03
+            Assets.getPath ("assets/spines/1x/seraphim03/character-ess.png"),
+            Assets.getPath ("assets/spines/1x/seraphim03/character-ess.atlas"),
+            Assets.getPath ("assets/spines/1x/seraphim03/character-ess.spine"),
+            Assets.getPath ("assets/spines/1x/seraphim03/character-ess.spinejson"),
+
+            // seraphim04
+            Assets.getPath ("assets/spines/1x/seraphim04/character-ess.png"),
+            Assets.getPath ("assets/spines/1x/seraphim04/character-ess.atlas"),
+            Assets.getPath ("assets/spines/1x/seraphim04/character-ess.spine"),
+            Assets.getPath ("assets/spines/1x/seraphim04/character-ess.spinejson"),
+
+            // trap01
+            Assets.getPath ("assets/spines/1x/trap01/trap-ess.png"),
+            Assets.getPath ("assets/spines/1x/trap01/trap-ess.atlas"),
+            Assets.getPath ("assets/spines/1x/trap01/trap-ess.spinejson"),
+            // trap02
+            Assets.getPath ("assets/spines/1x/trap02/trap-ess.png"),
+            Assets.getPath ("assets/spines/1x/trap02/trap-ess.atlas"),
+            Assets.getPath ("assets/spines/1x/trap02/trap-ess.spinejson"),
+           // trap03
+            Assets.getPath ("assets/spines/1x/trap03/trap-ess.png"),
+            Assets.getPath ("assets/spines/1x/trap03/trap-ess.atlas"),
+            Assets.getPath ("assets/spines/1x/trap03/trap-ess.spinejson"),
+           // trap04
+           Assets.getPath ("assets/spines/1x/trap04/trap-ess.png"),
+           Assets.getPath ("assets/spines/1x/trap04/trap-ess.atlas"),
+           Assets.getPath ("assets/spines/1x/trap04/trap-ess.spinejson"),
+           // trap05
+           Assets.getPath ("assets/spines/1x/trap05/trap-ess.png"),
+           Assets.getPath ("assets/spines/1x/trap05/trap-ess.atlas"),
+           Assets.getPath ("assets/spines/1x/trap05/trap-ess.spinejson"),
+          // trap06
+           Assets.getPath ("assets/spines/1x/trap06/trap-ess.png"),
+           Assets.getPath ("assets/spines/1x/trap06/trap-ess.atlas"),
+           Assets.getPath ("assets/spines/1x/trap06/trap-ess.spinejson"),
+    
+            // vampire
             Assets.getPath ("assets/spines/1x/vampire/character-ess.png"),
             Assets.getPath ("assets/spines/1x/vampire/character-ess.atlas"),
             Assets.getPath ("assets/spines/1x/vampire/character-ess.spine"),
