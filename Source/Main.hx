@@ -187,7 +187,7 @@ class Main extends Sprite
         ]);
         trace(_assets.enqueue);
         _assets.loadQueue(onComplete);
-        trace("--------------------------------------------");
+       // trace("--------------------------------------------");
 
     }
 
@@ -214,6 +214,7 @@ class Main extends Sprite
         _progressBar = new ProgressBar(175, 20);
         _progressBar.x = (_background.width - _progressBar.width) / 2;
         _progressBar.y =  _background.height * 0.7;
+        // _progressBar.ratio = .0001;
         addChild(_progressBar);
     }
 
