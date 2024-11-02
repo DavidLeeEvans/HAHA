@@ -14,7 +14,7 @@ import openfl.Vector;
 
 import utils.MenuButton;
 
-@:keep class AnimationScene extends Scene
+@:keep class AnimationScene extends AbstractScene
 {
     private var _startButton:Button;
     private var _delayButton:Button;

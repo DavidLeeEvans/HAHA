@@ -13,7 +13,7 @@ import openfl.Vector;
 
 import utils.MenuButton;
 
-@:keep class Exit extends Scene
+@:keep class Exit extends AbstractScene
 {
     public function new()
     {

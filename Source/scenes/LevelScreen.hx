@@ -13,7 +13,7 @@ import openfl.Vector;
 
 import utils.MenuButton;
 
-@:keep class LevelScreen extends Scene
+@:keep class LevelScreen extends AbstractScene
 {
     public function new()
     {

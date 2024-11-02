@@ -14,7 +14,7 @@ import scenes.TextureScene;
 import scenes.TouchScene;
 */
 
-import scenes.SplashScene;
+// import scenes.SplashScene;
 #if demo_video
 import scenes.VideoScene;
 #end
@@ -42,10 +42,10 @@ class MainMenu extends Sprite
     
     private function init():Void
     {
-        var logo:Image = new Image(Game.assets.getTexture("logo"));
-        addChild(logo);
-        var splash:SplashScene = new SplashScene();
-        addChild(splash);
+        // var logo:Image = new Image(Game.assets.getTexture("logo"));
+        // addChild(logo);
+        // var splash:SplashScene = new SplashScene();
+        // addChild(splash);
 /*        
         var scenesToCreate:Array<Array<Dynamic>> = [
             ["Textures", TextureScene],
@@ -89,16 +89,16 @@ class MainMenu extends Sprite
   */
   // show information about rendering method (hardware/software)
         
-        var driverInfo:String = Starling.current.context.driverInfo;
-        trace(driverInfo);
-        var infoText:TextField = new TextField(310, 64, driverInfo);
-        infoText.format.font = "DejaVu Sans";
-        infoText.format.size = 50;
-        infoText.format.verticalAlign = Align.TOP;
-        infoText.x = 50;
-        infoText.y = 175 - infoText.height;
-        infoText.addEventListener(TouchEvent.TOUCH, onInfoTextTouched);
-        addChildAt(infoText, 0);
+       // var driverInfo:String = Starling.current.context.driverInfo;
+        //trace(driverInfo);
+        //var infoText:TextField = new TextField(310, 64, driverInfo);
+        //infoText.format.font = "DejaVu Sans";
+        //infoText.format.size = 50;
+        //infoText.format.verticalAlign = Align.TOP;
+        //infoText.x = 50;
+        //infoText.y = 175 - infoText.height;
+        //infoText.addEventListener(TouchEvent.TOUCH, onInfoTextTouched);
+        //addChildAt(infoText, 0);
     }
     
     private function onInfoTextTouched(event:TouchEvent):Void
