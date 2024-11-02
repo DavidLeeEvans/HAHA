@@ -91,6 +91,11 @@ class Main extends Sprite
             Assets.getPath ("assets/fonts/1x/desyrel.png"),
             Assets.getPath ("assets/fonts/1x/desyrel.fnt"),
             //TODO dle add other assets 
+
+            Assets.getPath ("assets/spines/1x/vampire/goblins.png"),
+            Assets.getPath ("assets/spines/1x/vampire/goblins.atlas"),
+            Assets.getPath ("assets/spines/1x/vampire/goblins-pro.json"),
+            Assets.getPath ("assets/spines/1x/vampire/goblins-pro.skel"),
             #if flash
             Assets.getPath ("assets/audio/wing_flap.mp3")
             #else
