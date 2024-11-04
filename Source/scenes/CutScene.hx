@@ -14,7 +14,7 @@ import openfl.Vector;
 
 import utils.MenuButton;
 
-@:keep class SplashScene extends AbstractScene
+@:keep class CutScene extends AbstractScene
 {
     private var _egg:Image;
     private var _transitions:Array<String>;
