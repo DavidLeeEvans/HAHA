@@ -1,5 +1,7 @@
 package;
 
+import scenes.LoginScene;
+import scenes.ExitScene.ExitScenes;
 import starling.display.DisplayObjectContainer;
 import starling.display.DisplayObject;
 import openfl.system.System;
@@ -14,6 +16,15 @@ import starling.events.Event;
 import starling.events.KeyboardEvent;
 import starling.assets.AssetManager;
 import scenes.MainMenu;
+import scenes.AnimationScene;
+import scenes.CharacterEdit;
+import scenes.CutScene;
+import scenes.Exit;
+import scenes.LevelScreen;
+import scenes.Login;
+import scenes.PlayGame;
+import scenes.Settings;
+
 
 @:keep class Game extends DisplayObjectContainer
 {
@@ -25,8 +36,12 @@ import scenes.MainMenu;
     #end
     
     private var _mainMenu:MainMenu;
-    
-    private var _currentScene:Sprite;
+    private var _animationScene:AnimationScene;
+    private var _characterEdit:CharacterEdit;
+    private var _cutScene:CutScene;
+    private var _exitScene:ExitScenes;
+    private var _levelScene:LevelScreen;
+    private var _loginScene:LoginScene;
     
     private static var sAssets:AssetManager;
     
