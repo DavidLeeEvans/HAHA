@@ -31,6 +31,7 @@ import scenes.SettingScene;
 
 @:keep class Game extends DisplayObjectContainer
 {
+    var _backButton:Button;
     // Embed the Ubuntu Font. Beware: the 'embedAsCFF'-part IS REQUIRED!!!
     // TODO dle examine 
     #if 0
@@ -79,6 +80,7 @@ import scenes.SettingScene;
             _mainMenu = new MainMenu();
         
         addChild(_mainMenu);
+
     }
     
     private function onKey(event:KeyboardEvent):Void

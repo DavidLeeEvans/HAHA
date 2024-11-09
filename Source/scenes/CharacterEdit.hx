@@ -17,6 +17,7 @@ import utils.MenuButton;
 {
     public function new()
     {
+        trace("Character Edit Init");
         super();
         
 }
