@@ -13,6 +13,7 @@ import starling.display.Sprite;
 import starling.events.Event;
 import starling.events.KeyboardEvent;
 import starling.assets.AssetManager;
+import scenes.MainMenu;
 
 @:keep class Game extends DisplayObjectContainer
 {
@@ -24,6 +25,7 @@ import starling.assets.AssetManager;
     #end
     
     private var _mainMenu:MainMenu;
+    
     private var _currentScene:Sprite;
     
     private static var sAssets:AssetManager;
