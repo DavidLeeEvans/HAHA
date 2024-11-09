@@ -24,7 +24,7 @@ import starling.assets.AssetManager;
     #end
     
     private var _mainMenu:MainMenu;
-    // private var _currentScene:Sprite;
+    private var _currentScene:Sprite;
     
     private static var sAssets:AssetManager;
     
