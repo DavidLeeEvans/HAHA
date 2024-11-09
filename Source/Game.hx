@@ -1,5 +1,8 @@
 package;
 
+import scenes.AbstractScene;
+import scenes.SettingScene;
+import scenes.PlayGameScene;
 import scenes.LoginScene;
 import scenes.ExitScene.ExitScenes;
 import starling.display.DisplayObjectContainer;
@@ -19,11 +22,11 @@ import scenes.MainMenu;
 import scenes.AnimationScene;
 import scenes.CharacterEdit;
 import scenes.CutScene;
-import scenes.Exit;
+import scenes.ExitScene;
 import scenes.LevelScreen;
-import scenes.Login;
-import scenes.PlayGame;
-import scenes.Settings;
+import scenes.LoginScene;
+import scenes.PlayGameScene;
+import scenes.SettingScene;
 
 
 @:keep class Game extends DisplayObjectContainer
@@ -42,6 +45,10 @@ import scenes.Settings;
     private var _exitScene:ExitScenes;
     private var _levelScene:LevelScreen;
     private var _loginScene:LoginScene;
+    private var _playGameScene:PlayGameScene;
+    private var _settingScene:SettingScene;
+    //
+    private var _currentScene:AbstractScene;
     
     private static var sAssets:AssetManager;
     
@@ -104,7 +111,8 @@ import scenes.Settings;
         if (_currentScene != null) return;
         
         var sceneClass:Class<Dynamic> = Type.resolveClass(name);
-        _currentScene = cast(Type.createInstance(sceneClass, []), Sprite);
+        // _currentScene = cast(Type.createInstance(sceneClass, []), Sprite);
+        _currentScene = cast(Type.createInstance(sceneClass, []), AbstractScene);
         _mainMenu.removeFromParent();
         addChild(_currentScene);
     }
