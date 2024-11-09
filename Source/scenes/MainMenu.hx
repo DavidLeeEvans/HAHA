@@ -39,30 +39,26 @@ class MainMenu extends AbstractScene
         super();
         init();
     }
-    
+    var _buttonCharacterEdit:Button;
+    var _buttonExit:Button;
+    var _buttonLevelScreen:Button;
+    var _buttonLogin:Button;
+    var _buttonPlayGame:Button;
+    var _buttonSettings:Button;
     private function init():Void
     {
+        // create_buttons();
         // var logo:Image = new Image(Game.assets.getTexture("logo"));
         // addChild(logo);
         // var splash:SplashScene = new SplashScene();
         // addChild(splash);
-/*        
+     
         var scenesToCreate:Array<Array<Dynamic>> = [
-            ["Textures", TextureScene],
-            ["Multitouch", TouchScene],
-            ["TextFields", TextScene],
-            ["Animations", AnimationScene],
-            ["Custom hit-test", CustomHitTestScene],
-            ["Movie Clip", MovieScene],
-            ["Filters", FilterScene],
-            ["Blend Modes", BlendModeScene],
-            ["Render Texture", RenderTextureScene],
-            ["Benchmark", BenchmarkScene],
-            ["Masks", MaskScene],
-            ["Sprite 3D", Sprite3DScene]
-            #if demo_video
-            ,["Video", VideoScene]
-            #end
+            ["Character Edit", CharacterEdit],
+            ["Level Screen", LevelScreen],
+            ["Login Screen", LoginScene],
+            ["Play Game", PlayGameScene],
+            ["Settings", SettingScene]
         ];
         
         var count:Int = 0;
@@ -86,7 +82,7 @@ class MainMenu extends AbstractScene
             ++count;
         }
         
-  */
+  
   // show information about rendering method (hardware/software)
         
        // var driverInfo:String = Starling.current.context.driverInfo;
@@ -105,5 +101,21 @@ class MainMenu extends AbstractScene
     {
         if (event.getTouch(this, TouchPhase.ENDED) != null)
             Starling.current.showStats = !Starling.current.showStats;
+    }
+
+    private function create_buttons():Void {
+        _buttonCharacterEdit = new MenuButton("kjdlkjsdlkjdlkjsd");
+        _buttonCharacterEdit.height = 80;
+        _buttonCharacterEdit.width = 80;
+        _buttonCharacterEdit.readjustSize();
+        // button.x = count % 2 == 0 ? 28 : 167;
+        // button.y = #if demo_video 145 #else 155 #end + Std.int(count / 2) * 46;
+        _buttonCharacterEdit.x = 120;
+        _buttonCharacterEdit.y = 120;
+        _buttonCharacterEdit.name = Type.getClassName(CharacterEdit);
+
+        trace("-------------------------------------------------------------------------------------------------------------");
+        addChild(_buttonCharacterEdit);
+        
     }
 }

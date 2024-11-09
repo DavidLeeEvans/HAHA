@@ -61,7 +61,7 @@ import scenes.SettingScene;
     public function start(assets:AssetManager):Void
     {
         sAssets = assets;
-        addChild(new Image(assets.getTexture("background")));
+        // addChild(new Image(assets.getTexture("background")));
         showMainMenu();
         addEventListener(Event.TRIGGERED, onButtonTriggered);
         stage.addEventListener(KeyboardEvent.KEY_DOWN, onKey);

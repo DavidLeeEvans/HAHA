@@ -185,9 +185,7 @@ class Main extends Sprite
             Assets.getPath ("assets/audio/wing_flap.ogg")
             #end
         ]);
-        trace(_assets.enqueue);
         _assets.loadQueue(onComplete);
-       // trace("--------------------------------------------");
 
     }
 
