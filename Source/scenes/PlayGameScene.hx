@@ -1,5 +1,6 @@
 package scenes;
 
+import starling.display.Sprite;
 import starling.animation.BezierEasing;
 import starling.animation.Transitions;
 import starling.animation.Tween;
@@ -10,19 +11,20 @@ import starling.text.TextField;
 import starling.utils.Color;
 import starling.utils.MathUtil.deg2rad;
 import openfl.Vector;
-
 import utils.MenuButton;
 
-@:keep class PlayGameScene extends AbstractScene
-{
-    public function new()
-    {
-        super();
-        
-}
-    
-    public override function dispose():Void
-    {
-        super.dispose();
-    }
+@:keep class PlayGameScene extends Sprite {
+	public function new() {
+		super();
+
+
+	}
+
+	public override function dispose():Void {
+		super.dispose();
+	}
+    private function load_characters():Void {}
+    private function load_track(level:Int):Void {}
+    private function load_good_opposition():Void {}
+    private function load_bad_opposition():Void {}
 }

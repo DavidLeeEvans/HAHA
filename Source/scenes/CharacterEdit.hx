@@ -1,5 +1,6 @@
 package scenes;
 
+import starling.display.Sprite;
 import starling.animation.BezierEasing;
 import starling.animation.Transitions;
 import starling.animation.Tween;
@@ -13,7 +14,7 @@ import openfl.Vector;
 
 import utils.MenuButton;
 
-@:keep class CharacterEdit extends AbstractScene
+@:keep class CharacterEdit extends Sprite
 {
     public function new()
     {

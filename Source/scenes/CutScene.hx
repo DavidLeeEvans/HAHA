@@ -1,5 +1,6 @@
 package scenes;
 
+import starling.display.Sprite;
 import js.lib.webassembly.Global;
 import starling.animation.BezierEasing;
 import starling.animation.Transitions;
@@ -14,7 +15,7 @@ import openfl.Vector;
 
 import utils.MenuButton;
 
-@:keep class CutScene extends AbstractScene
+@:keep class CutScene extends Sprite
 {
     private var _egg:Image;
     private var _transitions:Array<String>;

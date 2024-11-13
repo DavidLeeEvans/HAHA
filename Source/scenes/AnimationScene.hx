@@ -1,5 +1,6 @@
 package scenes;
 
+import starling.display.Sprite;
 import starling.animation.BezierEasing;
 import starling.animation.Transitions;
 import starling.animation.Tween;
@@ -14,7 +15,7 @@ import openfl.Vector;
 
 import utils.MenuButton;
 
-@:keep class AnimationScene extends AbstractScene
+@:keep class AnimationScene extends Sprite
 {
     private var _startButton:Button;
     private var _delayButton:Button;

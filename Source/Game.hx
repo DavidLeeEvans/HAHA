@@ -1,6 +1,5 @@
 package;
 
-import scenes.AbstractScene;
 import scenes.SettingScene;
 import scenes.PlayGameScene;
 import scenes.LoginScene;
@@ -49,7 +48,7 @@ import scenes.SettingScene;
     private var _playGameScene:PlayGameScene;
     private var _settingScene:SettingScene;
     //
-    private var _currentScene:AbstractScene;
+    private var _currentScene:Sprite;
     
     private static var sAssets:AssetManager;
     
@@ -114,7 +113,7 @@ import scenes.SettingScene;
         
         var sceneClass:Class<Dynamic> = Type.resolveClass(name);
         // _currentScene = cast(Type.createInstance(sceneClass, []), Sprite);
-        _currentScene = cast(Type.createInstance(sceneClass, []), AbstractScene);
+        _currentScene = cast(Type.createInstance(sceneClass, []), Sprite);
         _mainMenu.removeFromParent();
         addChild(_currentScene);
     }
