@@ -1,5 +1,7 @@
 package scenes;
 
+import characters.AbstractBaseCharacter;
+import spine.starling.SkeletonAnimation;
 import characters.Vampire;
 import characters.Angel;
 import starling.events.TouchEvent;
@@ -17,6 +19,19 @@ import starling.utils.MathUtil.deg2rad;
 import openfl.Vector;
 import utils.MenuButton;
 
+import openfl.utils.Assets;
+import spine.attachments.AtlasAttachmentLoader;
+import spine.attachments.AttachmentLoader;
+import spine.SkeletonJson;
+import spine.starling.SkeletonAnimation;
+import spine.starling.StarlingAssetsFile;
+import spine.starling.StarlingAtlasAttachmentLoader;
+import spine.starling.StarlingTextureLoader;
+import starling.core.Starling;
+import starling.display.Sprite;
+import starling.textures.Texture;
+
+
 @:keep class PlayGameScene extends Sprite {
 	private var _frameCount:Int;
 	private var _failCount:Int;
@@ -30,13 +45,54 @@ import utils.MenuButton;
 
 	public function new() {
 		super();
-		load_track(3); // TODO testing
-		load_characters();
-		load_good_opposition();
-		load_bad_opposition();
+		//
 		addEventListener(Event.ENTER_FRAME, onEnterFrame);
 		addEventListener(TouchEvent.TOUCH, onTouch);
-	}
+		var skeletonFile = new StarlingAssetsFile("goblin/goblins-pro.json");
+        var loaders = [ createFromStarlingAtlas(), createFromSpineAtlas() ];
+
+        for (index in 0...loaders.length) {
+            var skeletonJson = new SkeletonJson(loaders[index]);
+            var skeletonData = skeletonJson.readSkeletonData(skeletonFile);
+            // _angel = new SkeletonAnimation(skeletonData);
+            _angel = new Angel(skeletonData);
+
+            _angel.y = 100 + (Starling.current.stage.stageHeight - 200) * Math.random();
+            _angel.x = 100 + (Starling.current.stage.stageWidth - 200) * Math.random();
+            _angel.skeleton.setSkinByName("goblin");
+            _angel.skeleton.setSlotsToSetupPose();
+            _angel.state.setAnimationByName(0, "walk", true);
+
+            Starling.current.juggler.add(_angel);
+            addChild(_angel);
+        }
+    }
+
+    private function createFromStarlingAtlas():AttachmentLoader {
+        var textureAtlas = new spine.support.graphics.TextureAtlas(
+            Assets.getText("goblin/goblins.atlas"),
+            new StarlingTextureLoader(
+                Texture.fromBitmapData(Assets.getBitmapData("goblin/goblins.png"))
+            )
+        );
+
+        return new AtlasAttachmentLoader(textureAtlas);
+    }
+
+    private function createFromSpineAtlas():AttachmentLoader {
+        var textureAtlas = new starling.textures.TextureAtlas(
+            Texture.fromBitmapData(Assets.getBitmapData("goblin/goblins-mesh-starling.png")),
+            Assets.getText("goblin/goblins-mesh-starling.xml")
+        );
+
+        return new StarlingAtlasAttachmentLoader(textureAtlas);
+    }
+		//
+		// load_track(3); // TODO testing
+		// load_characters();
+		// load_good_opposition();
+		// load_bad_opposition();
+	
 
 	public override function dispose():Void {
 		super.dispose();
@@ -44,12 +100,12 @@ import utils.MenuButton;
 		unload_assets();
 	}
 
-	private function load_characters():Void {
-		_angel = new Angel();
-		 Starling.current.juggler.add(_angel);
-            // addChild(skeleton);
+	// private function load_characters():Void {
+	// 	_angel = new Angel();
+	// 	 Starling.current.juggler.add(_angel);
+    //         // addChild(skeleton);
 
-	}
+	// }
 
 	private function load_track(level:Int):Void {}
 

@@ -1,6 +1,11 @@
 package characters;
 
-import starling.display.Sprite;
+import spine.AnimationStateData;
+import spine.SkeletonData;
+import spine.starling.SkeletonAnimation;
 
-abstract class AbstractBaseCharacter extends Sprite{
+abstract class AbstractBaseCharacter extends SkeletonAnimation{
+    public function new(skeletonData:SkeletonData, stateData:AnimationStateData = null) {
+        super(skeletonData,stateData);
+    }
 }
