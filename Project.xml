@@ -46,9 +46,9 @@
 	<assets path="assets/spines/1x/trap04" embed="true" />
 	<assets path="assets/spines/1x/trap05" embed="true" />
 	<assets path="assets/spines/1x/trap06" embed="true" />
-	<assets path="assets/spines/1x/vampire" embed="true" />
+	<assets path="assets/spines/1x/vampire" rename="vampire" embed="true" />
 <!-- Testing-->
-	<assets path="assets/spines/goblin" rename="goblin" embed="true" />
+	<assets path="assets/spines/1x/goblin" rename="goblin" embed="true" />
 
 	
 </project>
