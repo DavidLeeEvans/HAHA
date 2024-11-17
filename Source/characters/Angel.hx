@@ -8,7 +8,7 @@ import spine.starling.StarlingAssetsFile;
 import spine.starling.StarlingAtlasAttachmentLoader;
 import spine.starling.StarlingTextureLoader;
 import starling.core.Starling;
-import starling.display.Sprite;
+// import starling.display.Sprite;
 import starling.textures.Texture;
 
 class Angel extends  AbstractBaseCharacter implements InterfaceMovement {

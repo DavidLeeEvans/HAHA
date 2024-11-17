@@ -44,7 +44,12 @@ import utils.MenuButton;
 		unload_assets();
 	}
 
-	private function load_characters():Void {}
+	private function load_characters():Void {
+		_angel = new Angel();
+		 Starling.current.juggler.add(_angel);
+            // addChild(skeleton);
+
+	}
 
 	private function load_track(level:Int):Void {}
 
