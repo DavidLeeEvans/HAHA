@@ -1,4 +1,6 @@
 package characters;
 
-abstract class AbstractBaseCharacter{
+import starling.display.Sprite;
+
+abstract class AbstractBaseCharacter extends Sprite{
 }

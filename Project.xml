@@ -15,7 +15,8 @@
 	<!-- -->	
 	<haxelib name="openfl" />
 	<haxelib name="haxeui-core" />
-	<haxelib name="spine-haxe" />	
+	<!-- <haxelib name="spine-haxe" /> -->
+	<haxelib name="starling-spine-hx" />
 	<haxelib name="actuate" />
 	<haxelib name="starling" />
 	<haxelib name="haxeui-openfl" />
