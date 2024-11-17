@@ -48,7 +48,7 @@
 	<assets path="assets/spines/1x/trap06" embed="true" />
 	<assets path="assets/spines/1x/vampire" embed="true" />
 <!-- Testing-->
-	<assets path="assets/goblin" rename="goblin" embed="true" />
+	<assets path="assets/spines/goblin" rename="goblin" embed="true" />
 
 	
 </project>
