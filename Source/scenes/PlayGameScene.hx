@@ -1,5 +1,6 @@
 package scenes;
 
+import starling.events.TouchEvent;
 import starling.events.EnterFrameEvent;
 import starling.display.Sprite;
 import starling.animation.BezierEasing;
@@ -30,6 +31,7 @@ import utils.MenuButton;
 		load_good_opposition();
 		load_bad_opposition();
 		addEventListener(Event.ENTER_FRAME, onEnterFrame);
+		addEventListener(TouchEvent.TOUCH, onTouch);
 	}
 
 	public override function dispose():Void {
@@ -50,6 +52,11 @@ import utils.MenuButton;
 			if (!_started) return;
 		}
 	
+		private function onTouch(event:TouchEvent):Void
+			{
+				if (!_started) return;
+			}
+		
 }
 
 
