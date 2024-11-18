@@ -135,25 +135,25 @@ import starling.textures.Texture;
             Starling.current.juggler.add(_angel);
             addChild(_angel);
 			// Load Vampire
-			var skeletonFile = new StarlingAssetsFile("goblin/goblins-pro.json");
-        var loaders = [ createFromStarlingAtlas("goblin/goblins.atlas","goblin/goblins.png"), createFromSpineAtlas("goblin/goblins-mesh-starling.xml","goblin/goblins-mesh-starling.png") ];
+			// var skeletonFile = new StarlingAssetsFile("vampire/character-ess.spinejson");
+        // var loaders = [ createFromStarlingAtlas("vampire/character-ess.atlas","vampire/character-ess.png"), createFromSpineAtlas("vampire/goblins-mesh-starling.xml","vampire/goblins-mesh-starling.png") ];
 
-        for (index in 0...loaders.length) {
-            var skeletonJson = new SkeletonJson(loaders[index]);
-            var skeletonData = skeletonJson.readSkeletonData(skeletonFile);
-            // _angel = new SkeletonAnimation(skeletonData);
-            _angel = new Angel(skeletonData);
+        // for (index in 0...loaders.length) {
+        //     var skeletonJson = new SkeletonJson(loaders[index]);
+        //     var skeletonData = skeletonJson.readSkeletonData(skeletonFile);
+        //     // _angel = new SkeletonAnimation(skeletonData);
+        //     _angel = new Angel(skeletonData);
 
 
-            _angel.y = 100 + (Starling.current.stage.stageHeight - 200) * Math.random();
-            _angel.x = 100 + (Starling.current.stage.stageWidth - 200) * Math.random();
-            _angel.skeleton.setSkinByName("goblin");
-            _angel.skeleton.setSlotsToSetupPose();
-            _angel.state.setAnimationByName(0, "walk", true);
-			_angel.scale = .2;
+        //     _angel.y = 100 + (Starling.current.stage.stageHeight - 200) * Math.random();
+        //     _angel.x = 100 + (Starling.current.stage.stageWidth - 200) * Math.random();
+        //     _angel.skeleton.setSkinByName("goblin");
+        //     _angel.skeleton.setSlotsToSetupPose();
+        //     _angel.state.setAnimationByName(0, "walk", true);
+		// 	_angel.scale = .2;
 
-            Starling.current.juggler.add(_angel);
-            addChild(_angel);
+        //     Starling.current.juggler.add(_angel);
+        //     addChild(_angel);
         }
 	}
 
