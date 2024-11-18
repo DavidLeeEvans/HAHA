@@ -57,11 +57,13 @@ import starling.textures.Texture;
             // _angel = new SkeletonAnimation(skeletonData);
             _angel = new Angel(skeletonData);
 
+
             _angel.y = 100 + (Starling.current.stage.stageHeight - 200) * Math.random();
             _angel.x = 100 + (Starling.current.stage.stageWidth - 200) * Math.random();
             _angel.skeleton.setSkinByName("goblin");
             _angel.skeleton.setSlotsToSetupPose();
             _angel.state.setAnimationByName(0, "walk", true);
+			_angel.scale = .2;
 
             Starling.current.juggler.add(_angel);
             addChild(_angel);

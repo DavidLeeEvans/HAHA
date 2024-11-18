@@ -31,21 +31,21 @@
 	<!-- -->
 
 
-	<assets path="assets/spines/1x/angel" embed="true" />
-	<assets path="assets/spines/1x/demon01"  embed="true" />
-	<assets path="assets/spines/1x/demon02"  embed="true" />
-	<assets path="assets/spines/1x/demon03"  embed="true" />
-	<assets path="assets/spines/1x/demon04"  embed="true" />
-	<assets path="assets/spines/1x/seraphim01" embed="true" />
-	<assets path="assets/spines/1x/seraphim02" embed="true" />
-	<assets path="assets/spines/1x/seraphim03" embed="true" />
-	<assets path="assets/spines/1x/seraphim04" embed="true" />
-	<assets path="assets/spines/1x/trap01" embed="true" />
-	<assets path="assets/spines/1x/trap02" embed="true" />
-	<assets path="assets/spines/1x/trap03" embed="true" />
-	<assets path="assets/spines/1x/trap04" embed="true" />
-	<assets path="assets/spines/1x/trap05" embed="true" />
-	<assets path="assets/spines/1x/trap06" embed="true" />
+	<assets path="assets/spines/1x/angel" rename="angel"  embed="true" />
+	<assets path="assets/spines/1x/demon01"  rename="demon01" embed="true" />
+	<assets path="assets/spines/1x/demon02"  rename="demon02" embed="true" />
+	<assets path="assets/spines/1x/demon03"  rename="demon03" embed="true" />
+	<assets path="assets/spines/1x/demon04"  rename="demon04" embed="true" />
+	<assets path="assets/spines/1x/seraphim01" rename="seraphim01" embed="true" />
+	<assets path="assets/spines/1x/seraphim02" rename="seraphim02" embed="true" />
+	<assets path="assets/spines/1x/seraphim03" rename="seraphim03" embed="true" />
+	<assets path="assets/spines/1x/seraphim04" rename="seraphim04" embed="true" />
+	<assets path="assets/spines/1x/trap01" rename="trap01" embed="true" />
+	<assets path="assets/spines/1x/trap02" rename="trap02" embed="true" />
+	<assets path="assets/spines/1x/trap03" rename="trap03" embed="true" />
+	<assets path="assets/spines/1x/trap04" rename="trap04" embed="true" />
+	<assets path="assets/spines/1x/trap05" rename="trap05" embed="true" />
+	<assets path="assets/spines/1x/trap06" rename="trap06" embed="true" />
 	<assets path="assets/spines/1x/vampire" rename="vampire" embed="true" />
 <!-- Testing-->
 	<assets path="assets/spines/1x/goblin" rename="goblin" embed="true" />
