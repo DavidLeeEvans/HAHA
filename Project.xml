@@ -20,6 +20,8 @@
 	<haxelib name="actuate" />
 	<haxelib name="starling" />
 	<haxelib name="haxeui-openfl" />
+	<haxelib name="gasm" />
+	<haxelib name="gasm-openfl" />
 	<!-- -->
 	<assets path="assets" include="*.skel" rename="assets" type="binary" />
 	<assets path="assets/audio/wing_flap.mp3" if="web || air" embed="false" />
