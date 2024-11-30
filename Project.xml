@@ -4,7 +4,7 @@
 	<meta title="HAHA" package="com.davidevans.games.haha" version="1.0.0" company="Cortex Semi" />
 <!-- 	<app main="Main" path="Export" file="HAHA" /> -->
 
-	<app path="bin" file="GASM" main="gasm.examples.openfl.bunnymark.Main"/>
+	<app path="bin" file="GASM" main="gasm.examples.openfl.bunnymark.Bunny"/>
 
 	<!-- -->
 	<window width="480" height="320" orientation="landscape" background="0xffffff" />
@@ -26,6 +26,8 @@
 	<haxelib name="gasm" />
 	<haxelib name="gasm-openfl" />
 	<!-- -->
+	<assets path="assets"/>
+
 	<assets path="assets" include="*.skel" rename="assets" type="binary" />
 	<assets path="assets/audio/wing_flap.mp3" if="web || air" embed="false" />
 	<assets path="assets/audio/wing_flap.ogg" unless="flash" embed="false" />
@@ -34,8 +36,6 @@
 	<assets path="assets/fonts/DejaVuSans.ttf" />
 	<assets path="assets/fonts/Ubuntu-R.ttf" />
 	<icon path="assets/openfl.svg"/>
-	<!-- -->
-
 
 	<assets path="assets/spines/1x/angel" rename="angel"  embed="true" />
 	<assets path="assets/spines/1x/demon01"  rename="demon01" embed="true" />
