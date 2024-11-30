@@ -1,5 +1,6 @@
 package scenes;
 
+import gasm.examples.openfl.bunnymark.Bunny;
 import scenes.ExitScene.ExitScenes;
 import scenes.AnimationScene;
 // import scenes.BenchmarkScene;
@@ -45,7 +46,8 @@ class MainMenu extends Sprite
         
         var scenesToCreate:Array<Array<Dynamic>> = [
             ["Character Edit", CharacterEdit],
-            ["Play Game", PlayGameScene],
+//            ["Play Game", PlayGameScene],
+            ["Play Game", Bunny],
             ["Login", LoginScene],
             ["Level Select", LevelScreen],
             ["Settings", SettingScene],

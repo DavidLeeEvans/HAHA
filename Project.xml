@@ -2,7 +2,10 @@
 <project>
 	
 	<meta title="HAHA" package="com.davidevans.games.haha" version="1.0.0" company="Cortex Semi" />
-	<app main="Main" path="Export" file="HAHA" />
+<!-- 	<app main="Main" path="Export" file="HAHA" /> -->
+
+	<app path="bin" file="GASM" main="gasm.examples.openfl.bunnymark.Main"/>
+
 	<!-- -->
 	<window width="480" height="320" orientation="landscape" background="0xffffff" />
 	<window resizable="true" unless="mobile || console" />
@@ -30,6 +33,7 @@
 	<assets path="assets/fonts/1x" embed="false" />
 	<assets path="assets/fonts/DejaVuSans.ttf" />
 	<assets path="assets/fonts/Ubuntu-R.ttf" />
+	<icon path="assets/openfl.svg"/>
 	<!-- -->
 
 
