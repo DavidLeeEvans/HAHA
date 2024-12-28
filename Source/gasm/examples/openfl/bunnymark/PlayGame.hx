@@ -44,6 +44,12 @@ class PlayGame extends OFLContext
 		.add(tc).add(new TextModelComponent("0", 25, 0xFFAA00))
 		.add(new FPSComponent())
 		.add(new FPSDisplayComponent());
+
+		var angel = new Entity()
+		.add(tc).add(new TextModelComponent("0", 25, 0xFFAA00))
+		.add(new FPSComponent())
+		.add(new FPSDisplayComponent());
+
 	}
 	
 	function testBunnies(count:Int) 
