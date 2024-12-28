@@ -39,6 +39,11 @@ class PlayGame extends OFLContext
 		baseEntity.add(new OFLSoundComponent(snd)).add(new PressSoundComponent());
 		baseEntity.addChild(ent);
 		*/
+
+		var vampire = new Entity()
+		.add(tc).add(new TextModelComponent("0", 25, 0xFFAA00))
+		.add(new FPSComponent())
+		.add(new FPSDisplayComponent());
 	}
 	
 	function testBunnies(count:Int) 
