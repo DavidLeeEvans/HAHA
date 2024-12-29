@@ -2,7 +2,7 @@
 <project>
 	
 	<meta title="HAHA" package="com.davidevans.games.haha" version="1.0.0" company="Cortex Semi" />
-	<app path="Export" file="HAHA" main="gasm.examples.openfl.bunnymark.Bunny"/> 
+	<app path="Export" file="HAHA" main="com.evans.david.games.haha.PlayGame"/> 
 
 	<!-- -->
 	<window width="480" height="320" orientation="landscape" background="0xffffff" />
